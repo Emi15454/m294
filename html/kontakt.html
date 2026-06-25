@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About & Contact | Premium Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+            <li>
+              <a href="kontakt.html" class="nav-link active" aria-current="page"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-spacing">
+      <section class="split-profile-grid" aria-label="Über mich">
+        <div class="profile-image-placeholder"></div>
+        <div>
+          <h1 style="margin-bottom: var(--space-sm)">Meine Philosophie</h1>
+          <p style="margin-bottom: var(--space-md)">
+            Ich betrachte das Web als Plattform für rohe Performance.
+            Abstraktionsschichten und schwere JavaScript-Frameworks verfälschen
+            oft die eigentliche Experience. Ich schreibe wartbaren, nativen Code
+            für anspruchsvolle Auftraggeber.
+          </p>
+          <h3>Expertise Stack</h3>
+          <ul class="tech-tag-list">
+            <li class="tech-tag">HTML5 Semantics</li>
+            <li class="tech-tag">CSS3 Grid / Custom Properties</li>
+            <li class="tech-tag">Vanilla ECMA JavaScript</li>
+            <li class="tech-tag">Web Components</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="contact-heading"
+        style="
+          border-top: 1px solid var(--border-color);
+          padding-top: var(--space-xxl);
+        "
+      >
+        <div style="text-align: center; margin-bottom: var(--space-xl)">
+          <h2 id="contact-heading">Projekt starten</h2>
+          <p>Lass uns über deine technische Infrastruktur sprechen.</p>
+        </div>
+
+        <form class="form-stack" action="#" method="POST">
+          <div>
+            <label
+              for="subject"
+              style="
+                display: block;
+                font-size: var(--fs-small);
+                margin-bottom: var(--space-xs);
+              "
+              >Betreffzeile (Zuweisung)</label
+            >
+            <div class="select-wrapper">
+              <select id="subject" class="custom-select" name="subject">
+                <option value="architecture">
+                  UI-Architecture / Core Engineering
+                </option>
+                <option value="design-system">
+                  Design System Implementation
+                </option>
+                <option value="consulting">
+                  Technisches Consulting / Performance-Audit
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="msg"
+              style="
+                display: block;
+                font-size: var(--fs-small);
+                margin-bottom: var(--space-xs);
+              "
+              >Projekt-Details (Ich-Form)</label
+            >
+            <textarea
+              id="msg"
+              class="form-textarea"
+              placeholder="Beschreibe kurz dein Vorhaben..."
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="align-self: flex-start"
+          >
+            Anfrage absenden
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2026 [Mein Name]. Built with Passion & Native Code.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

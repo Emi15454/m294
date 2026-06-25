@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt Details | Premium Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="projekte.html" class="nav-link active">Projekte</a>
+            </li>
+            <li><a href="kontakt.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-spacing">
+      <div class="detail-grid">
+        <section class="media-stack" aria-label="Projekt Medien">
+          <video
+            class="media-placeholder-video"
+            controls
+            poster=""
+            preload="metadata"
+          >
+            <source src="assets/video-placeholder.mp4" type="video/mp4" />
+            Ihr Browser unterstützt das Video-Tag nicht.
+          </video>
+          <div class="card-image" style="aspect-ratio: 16/9"></div>
+          <div class="card-image" style="aspect-ratio: 16/9"></div>
+        </section>
+
+        <aside class="sidebar-sticky">
+          <div>
+            <h1 style="font-size: var(--fs-h2); margin-bottom: var(--space-sm)">
+              Case Study // Fintech Core
+            </h1>
+            <p style="margin-bottom: var(--space-md)">
+              Ich habe dieses System von Grund auf so konzipiert, dass
+              Daten-Pipelines direkt im Browser verarbeitet werden. Kein
+              Virtual-DOM Overhead, maximale Performance für geschäftskritische
+              Krypto-Transaktionen.
+            </p>
+            <h3
+              style="
+                font-size: var(--fs-small);
+                text-transform: uppercase;
+                margin-bottom: var(--space-xs);
+              "
+            >
+              Meine Rolle
+            </h3>
+            <p
+              style="font-size: var(--fs-small); margin-bottom: var(--space-md)"
+            >
+              Sole Lead UI Engineer & System Architect
+            </p>
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--border-color)" />
+
+          <div class="calendar-widget-placeholder">
+            <h3 style="margin-bottom: var(--space-xs)">
+              Deep-Dive Session buchen
+            </h3>
+            <p
+              style="font-size: var(--fs-small); margin-bottom: var(--space-lg)"
+            >
+              Lass uns die Architektur dieses Projekts per Screen-Share
+              analysieren.
+            </p>
+
+            <div id="cal-com-widget" style="width: 100%">
+              <button class="btn btn-primary" style="width: 100%">
+                Terminkalender laden
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2026 [Mein Name]. Zero Framework Policy.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

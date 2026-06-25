@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekte | Premium Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a
+                href="projekte.html"
+                class="nav-link active"
+                aria-current="page"
+                >Projekte</a
+              >
+            </li>
+            <li><a href="kontakt.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-spacing">
+      <h1 style="margin-bottom: var(--space-md)">Archivierte Arbeiten</h1>
+
+      <ul class="filter-bar" role="tablist" aria-label="Projekte filtern">
+        <li>
+          <button class="filter-pill active" role="tab" aria-selected="true">
+            Alle
+          </button>
+        </li>
+        <li>
+          <button class="filter-pill" role="tab" aria-selected="false">
+            UI/UX
+          </button>
+        </li>
+        <li>
+          <button class="filter-pill" role="tab" aria-selected="false">
+            Engineering
+          </button>
+        </li>
+        <li>
+          <button class="filter-pill" role="tab" aria-selected="false">
+            Architecture
+          </button>
+        </li>
+      </ul>
+
+      <div class="project-grid">
+        <article class="project-card" style="position: relative">
+          <button class="bookmark-btn" aria-label="Projekt bookmarken">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </button>
+          <div class="card-image"></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag">Engineering</span></div>
+            <h3>01 // Core Engine</h3>
+            <p class="card-text">
+              Natives High-Performance Modul für asynchrone Berechnungen im
+              Browser.
+            </p>
+            <a href="projektdetail.html" class="card-link"
+              >Analyse offenes Projekt &rarr;</a
+            >
+          </div>
+        </article>
+
+        <article class="project-card" style="position: relative">
+          <button class="bookmark-btn" aria-label="Projekt bookmarken">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </button>
+          <div class="card-image"></div>
+          <div class="card-body">
+            <div class="card-tags"><span class="tag">UI/UX</span></div>
+            <h3>02 // Light Speed Frame</h3>
+            <p class="card-text">
+              Design-System, das ohne Stylesheets auskommt und rein über
+              CSS-Hooks arbeitet.
+            </p>
+            <a href="projektdetail.html" class="card-link"
+              >Analyse offenes Projekt &rarr;</a
+            >
+          </div>
+        </article>
+
+        <script>
+          // Einfacher Inline-Klon-Helfer für die lokale Entwicklungsphase, um 10 Karten im Grid visuell zu testen:
+          document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.querySelector(".project-grid");
+            const cards = document.querySelectorAll(".project-card");
+            // Wir klonen die vorhandenen Karten, bis wir exakt 10 haben
+            for (let i = 0; i < 4; i++) {
+              cards.forEach((card) => {
+                if (grid.children.length < 10) {
+                  grid.appendChild(card.cloneNode(true));
+                }
+              });
+            }
+          });
+        </script>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <h4>Sitemap</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="footer-links">
+              <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Rechtliches</h4>
+            <ul class="footer-links">
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 [Mein Name]. Custom Code Architecture.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

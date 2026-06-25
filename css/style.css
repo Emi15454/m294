@@ -391,3 +391,250 @@ a {
     flex-direction: column;
   }
 }
+
+/* ==========================================================================
+   PROJEKTÜBERSICHT (projekte.html) EXTENSIONS
+   ========================================================================== */
+
+/* Filter-Bar Flexbox System */
+.filter-bar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+  list-style: none;
+}
+
+.filter-pill {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 30px;
+  /* Perfekte Pillenform */
+  font-size: var(--fs-small);
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-pill:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+/* Aktiv Invertiert Zustand */
+.filter-pill.active {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+  border-color: var(--text-main);
+}
+
+/* Bookmark Herz-Icon */
+.bookmark-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background-color: rgba(13, 13, 13, 0.7);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+  transform: scale(1.05);
+}
+
+.bookmark-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   PROJEKTDETAIL (projektdetail.html) EXTENSIONS
+   ========================================================================== */
+
+/* Asymmetrisches 2-Spalten-Grid (60% / 40%) */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  /* Entspricht exakt dem 60% zu 40% Verhältnis */
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.media-placeholder-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 112px;
+  /* Header-Höhe + Padding */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Widget Container */
+.calendar-widget-placeholder {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================================================
+   KONTAKT & ÜBER MICH (kontakt.html) EXTENSIONS
+   ========================================================================== */
+
+.split-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* Quadratisch laut Blueprint */
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+}
+
+.profile-image-placeholder::before {
+  content: "[ Profilbild ]";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.tech-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  list-style: none;
+}
+
+.tech-tag {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  font-size: var(--fs-small);
+  border-radius: 4px;
+}
+
+/* Stilisierter Custom Select Dropdown */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  width: 100%;
+  padding: var(--space-sm);
+  background-color: var(--bg-secondary);
+  /* Vorgabe: Input auf bg-secondary */
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  border-radius: 4px;
+  appearance: none;
+  /* Deaktiviert nativen Browser-Arrow */
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Eigener Custom-Pfeil über CSS-Pseudo-Element */
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+  pointer-events: none;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: var(--space-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Fallbacks */
+@media (max-width: 968px) {
+  .detail-grid,
+  .split-profile-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
