@@ -3,240 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VEKTOR — Digitale Produkte mit Präzision gebaut</title>
-    <meta
-      name="description"
-      content="VEKTOR ist ein Studio für digitale Produkte: Web-Entwicklung, UI/UX und Markenauftritte mit Fokus auf Klarheit, Performance und Präzision."
-    />
+    <title>[Mein Name] | Premium Portfolio</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Zum Inhalt springen</a>
-
-    <header class="header">
-      <div class="container header__inner">
-        <a href="index.html" class="logo">VEKTOR<span>.</span></a>
-
-        <input
-          type="checkbox"
-          id="nav-toggle"
-          class="nav-toggle"
-          aria-hidden="true"
-        />
-        <label
-          for="nav-toggle"
-          class="nav-toggle-label"
-          aria-label="Menü öffnen"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <nav class="nav" aria-label="Hauptnavigation">
-          <ul class="nav__list">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
             <li>
-              <a class="nav__link" href="index.html" aria-current="page"
-                >Start</a
+              <a href="index.html" class="nav-link active" aria-current="page"
+                >Home</a
               >
             </li>
-            <li><a class="nav__link" href="projekte.html">Projekte</a></li>
-            <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
+            <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+            <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
           </ul>
-          <a class="btn btn--primary nav__cta" href="kontakt.html"
-            >Projekt anfragen</a
-          >
         </nav>
       </div>
     </header>
 
-    <main id="main">
-      <!-- ============ HERO ============ -->
-      <section class="hero">
-        <div class="container hero__inner">
-          <p class="eyebrow">Digitalstudio · Zürich</p>
-          <h1 class="hero__title">
-            Klarheit ist<br />
-            unsere Strategie<span class="cursor">_</span>
-          </h1>
-          <p class="hero__lede">
-            Wir entwickeln Web-Plattformen, Produkte und Markenauftritte für
-            Unternehmen, die auf Substanz statt Trends setzen — präzise
-            konzipiert, performant gebaut.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="projekte.html"
-              >Projekte ansehen</a
-            >
-            <a class="link-arrow" href="kontakt.html">
-              Projekt besprechen <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="hero__meta">
-            <div class="hero__meta-item">
-              <strong>48+</strong>
-              <span>Projekte realisiert</span>
-            </div>
-            <div class="hero__meta-item">
-              <strong>9</strong>
-              <span>Jahre Erfahrung</span>
-            </div>
-            <div class="hero__meta-item">
-              <strong>100%</strong>
-              <span>Inhouse entwickelt</span>
-            </div>
-          </div>
-        </div>
+    <main>
+      <section class="container hero" aria-label="Vorstellung">
+        <h1 class="hero-pitch">Design trifft auf kompromisslosen Code.</h1>
+        <p class="hero-lead">
+          Ich entwickle digitale Interfaces mit klarem typografischem Fokus,
+          extrem hohen Kontrasten und nativer Performance.
+        </p>
+        <a href="projekte.html" class="btn btn-primary">Arbeiten ansehen</a>
       </section>
 
-      <!-- ============ AKTUELLE PROJEKTE ============ -->
-      <section class="section">
-        <div class="container">
-          <div class="section__header">
-            <div class="section__heading">
-              <p class="eyebrow">Ausgewählte Arbeiten</p>
-              <h2>Aktuelle Projekte</h2>
-            </div>
-            <a class="link-arrow" href="projekte.html">
-              Alle Projekte <span aria-hidden="true">→</span>
-            </a>
-          </div>
+      <section
+        class="container section-spacing"
+        aria-labelledby="heading-projects"
+      >
+        <h2 id="heading-projects">Aktuelle Projekte</h2>
 
-          <div class="grid grid--auto-fit">
-            <article class="card-project">
-              <div
-                class="card-project__media"
-                role="img"
-                aria-label="Vorschaubild: Finkontur Dashboard"
-                data-label="Projektbild"
-              ></div>
-              <div class="card-project__body">
-                <p class="eyebrow">Web App</p>
-                <h3 class="card-project__title">Finkontur Dashboard</h3>
-                <p class="card-project__desc">
-                  SaaS-Plattform für Vermögensverwaltung mit Echtzeit-Reporting
-                  und barrierefreiem Datenraum.
-                </p>
-                <div class="card-project__footer">
-                  <a class="link-arrow" href="projektdetail.html">
-                    Ansehen <span aria-hidden="true">→</span>
-                  </a>
-                </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div
+              class="card-image"
+              role="img"
+              aria-label="Projekt Vorschau"
+            ></div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Engineering</span>
               </div>
-            </article>
-
-            <article class="card-project">
-              <div
-                class="card-project__media"
-                role="img"
-                aria-label="Vorschaubild: Nordpol Air"
-                data-label="Projektbild"
-              ></div>
-              <div class="card-project__body">
-                <p class="eyebrow">UI/UX</p>
-                <h3 class="card-project__title">Nordpol Air</h3>
-                <p class="card-project__desc">
-                  Redesign der Buchungsplattform: schnellere Suche, klarere
-                  Tarifstruktur, +22% Conversion.
-                </p>
-                <div class="card-project__footer">
-                  <a class="link-arrow" href="projektdetail.html">
-                    Ansehen <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="card-project">
-              <div
-                class="card-project__media"
-                role="img"
-                aria-label="Vorschaubild: Helio Energy"
-                data-label="Projektbild"
-              ></div>
-              <div class="card-project__body">
-                <p class="eyebrow">Branding</p>
-                <h3 class="card-project__title">Helio Energy</h3>
-                <p class="card-project__desc">
-                  Markenidentität und Webauftritt für ein Solarenergie-Startup —
-                  vom Logo bis zum Launch.
-                </p>
-                <div class="card-project__footer">
-                  <a class="link-arrow" href="projektdetail.html">
-                    Ansehen <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ NEWSLETTER ============ -->
-      <section class="section section--alt newsletter">
-        <div class="container newsletter__inner">
-          <p class="eyebrow">Auf dem Laufenden bleiben</p>
-          <h2>Einblicke direkt im Postfach</h2>
-          <p class="text-muted">
-            Gelegentliche Notizen zu neuen Projekten, Prozess und Tools. Kein
-            Spam, jederzeit abbestellbar.
-          </p>
-
-          <form class="newsletter__form" action="#" method="post">
-            <div class="input-underline">
-              <label class="visually-hidden" for="newsletter-email"
-                >E-Mail-Adresse</label
+              <h3>Fintech Dashboard</h3>
+              <p class="card-text">
+                Ein hoch-kontrastreiches Interface zur Echtzeitanalyse komplexer
+                Transaktionsdaten.
+              </p>
+              <a href="projektdetail.html" class="card-link"
+                >Projekt ansehen &rarr;</a
               >
-              <input
-                type="email"
-                id="newsletter-email"
-                name="email"
-                placeholder="ihre@email.ch"
-                required
-              />
             </div>
-            <button type="submit" class="btn btn--primary">Abonnieren</button>
+          </article>
+
+          <article class="project-card">
+            <div
+              class="card-image"
+              role="img"
+              aria-label="Projekt Vorschau"
+            ></div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Typography</span>
+                <span class="tag">Frontend</span>
+              </div>
+              <h3>E-Commerce Core</h3>
+              <p class="card-text">
+                Minimalistischer Onlineshop mit dem Fokus auf radikal schnelle
+                Ladezeiten und Lesbarkeit.
+              </p>
+              <a href="projektdetail.html" class="card-link"
+                >Projekt ansehen &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div
+              class="card-image"
+              role="img"
+              aria-label="Projekt Vorschau"
+            ></div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Design System</span>
+              </div>
+              <h3>Crypto Token Brand</h3>
+              <p class="card-text">
+                Konzeption und native Entwicklung eines skalierbaren
+                UI-Komponentensystems.
+              </p>
+              <a href="projektdetail.html" class="card-link"
+                >Projekt ansehen &rarr;</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="newsletter section-spacing"
+        aria-labelledby="heading-newsletter"
+      >
+        <div class="container newsletter-inner">
+          <div class="newsletter-text">
+            <h2 id="heading-newsletter">Insights abonnieren</h2>
+            <p>
+              Erhalte monatlich fundierte Artikel über UI-Architektur, native
+              Webtechnologien und minimalistisches Design.
+            </p>
+          </div>
+          <form class="newsletter-form" action="#" method="POST" novalidate>
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Deine E-Mail-Adresse"
+              required
+              aria-label="E-Mail-Adresse für Newsletter"
+            />
+            <button type="submit" class="btn btn-primary">Abonnieren</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
       <div class="container">
-        <div class="footer__grid">
-          <div class="footer__col">
+        <div class="footer-inner">
+          <div class="footer-col">
             <h4>Navigation</h4>
-            <a class="footer__link" href="index.html">Start</a>
-            <a class="footer__link" href="projekte.html">Projekte</a>
-            <a class="footer__link" href="kontakt.html">Kontakt</a>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
           </div>
-          <div class="footer__col">
-            <h4>Social</h4>
-            <a class="footer__link" href="#" target="_blank" rel="noopener"
-              >LinkedIn</a
-            >
-            <a class="footer__link" href="#" target="_blank" rel="noopener"
-              >Instagram</a
-            >
-            <a class="footer__link" href="#" target="_blank" rel="noopener"
-              >GitHub</a
-            >
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="footer-links">
+              <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
           </div>
-          <div class="footer__col">
-            <h4>Kontakt</h4>
-            <a class="footer__link" href="mailto:hallo@vektor-studio.ch"
-              >hallo@vektor-studio.ch</a
-            >
-            <a class="footer__link" href="tel:+41440000000">+41 44 000 00 00</a>
+          <div class="footer-col">
+            <h4>Rechtliches</h4>
+            <ul class="footer-links">
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+            </ul>
           </div>
         </div>
-        <div class="footer__bottom">
-          <p>© 2026 VEKTOR Studio. Alle Rechte vorbehalten.</p>
-          <p>
-            <a class="footer__link" href="#">Impressum</a> ·
-            <a class="footer__link" href="#">Datenschutz</a>
-          </p>
+        <div class="footer-bottom">
+          <p>&copy; 2026 [Mein Name]. Alle Rechte vorbehalten.</p>
+          <p>Fokus auf das Wesentliche.</p>
         </div>
       </div>
     </footer>
