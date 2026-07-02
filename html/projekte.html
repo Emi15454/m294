@@ -30,30 +30,51 @@
 
     <main class="container section-spacing">
       <h1 style="margin-bottom: var(--space-md)">Projekt-Archiv</h1>
-
       <ul class="filter-bar" role="tablist" aria-label="Projekte filtern">
         <li>
-          <button class="filter-pill active" role="tab" aria-selected="true">
+          <button
+            class="filter-pill active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
             Alle
           </button>
         </li>
         <li>
-          <button class="filter-pill" role="tab" aria-selected="false">
+          <button
+            class="filter-pill"
+            data-filter="ui-ux"
+            role="tab"
+            aria-selected="false"
+          >
             UI/UX
           </button>
         </li>
         <li>
-          <button class="filter-pill" role="tab" aria-selected="false">
+          <button
+            class="filter-pill"
+            data-filter="engineering"
+            role="tab"
+            aria-selected="false"
+          >
             Engineering
           </button>
         </li>
         <li>
-          <button class="filter-pill" role="tab" aria-selected="false">
-            Core Dev
+          <button
+            class="filter-pill"
+            data-filter="architecture"
+            role="tab"
+            aria-selected="false"
+          >
+            Architecture
           </button>
         </li>
       </ul>
+      <div class="project-grid" data-display="all"></div>
 
+      <script src="../js/portfolio.js"></script>
       <div class="project-grid">
         <article class="project-card">
           <div class="card-image"></div>
