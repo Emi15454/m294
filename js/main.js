@@ -24,7 +24,7 @@ class PortfolioApp {
 
   async fetchPortfolioData() {
     try {
-      const response = await fetch("../data/portfolio-data.json");
+      const response = await fetch("../data/projects.json");
       if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
       return await response.json();
     } catch (error) {
