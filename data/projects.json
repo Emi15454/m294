@@ -1,112 +1,107 @@
-[
-  {
-    "category": "Test12344",
-    "desc": "a Test projecct.",
-    "id": 1,
-    "link": "projektdetail.html",
-    "tags": [
-      "testTag1",
-      "TestTag2"
-    ],
-    "title": "Testprojekt"
+{
+  "meta": {
+    "developerName": "Alex Müller",
+    "philosophy": "Ich entwickele Software aus der Überzeugung heraus, dass das Web keine schwerfälligen Abstraktionsebenen braucht, sondern saubere native Strukturen.",
+    "role": "Frontend Architect",
+    "socials": {
+      "github": "https://github.com/dein-username",
+      "linkedin": "https://linkedin.com/in/dein-username"
+    }
   },
-  {
-    "category": "ui-ux",
-    "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
-    "id": 2,
-    "link": "projektdetail.html",
-    "tags": [
-      "UI/UX",
-      "Design System"
-    ],
-    "title": "Light Speed Frame"
-  },
-  {
-    "category": "architecture",
-    "desc": "Echtzeit-Visualisierung komplexer Datenströme über native Web Workers.",
-    "id": 3,
-    "link": "projektdetail.html",
-    "tags": [
-      "Architecture",
-      "Big Data"
-    ],
-    "title": "Quantum Analytics"
-  },
-  {
-    "category": "engineering",
-    "desc": "Sicheres, barrierefreies Interface zur Validierung von Blockchain-Transaktionen.",
-    "id": 4,
-    "link": "projektdetail.html",
-    "tags": [
-      "Engineering",
-      "Security"
-    ],
-    "title": "Crypto Ledger UI"
-  },
-  {
-    "category": "ui-ux",
-    "desc": "B2B-Dashboard mit flexiblen Grid-Modulen und individualisierbaren Ansichten.",
-    "id": 5,
-    "link": "projektdetail.html",
-    "tags": [
-      "UI/UX",
-      "Saas"
-    ],
-    "title": "SaaS Matrix Dashboard"
-  },
-  {
-    "category": "architecture",
-    "desc": "Dezentrale Steuerungseinheit für IoT-Geräte, gekapselt in Vanilla JS.",
-    "id": 6,
-    "link": "projektdetail.html",
-    "tags": [
-      "Architecture",
-      "IoT"
-    ],
-    "title": "Autonomous System Node"
-  },
-  {
-    "category": "ui-ux",
-    "desc": "Konzeptionelle Web-Oberfläche für neuronale Telemetriedaten-Analyse.",
-    "id": 7,
-    "link": "projektdetail.html",
-    "tags": [
-      "UI/UX",
-      "BioTech"
-    ],
-    "title": "Neural Interface Mock"
-  },
-  {
-    "category": "engineering",
-    "desc": "In-Browser Bild- und Asset-Kompressor unter intensiver Nutzung der Canvas API.",
-    "id": 8,
-    "link": "projektdetail.html",
-    "tags": [
-      "Engineering",
-      "Build"
-    ],
-    "title": "Asset Pipeline Tool"
-  },
-  {
-    "category": "architecture",
-    "desc": "Interaktive Netzwerkgrafik, gerendert über hardwarebeschleunigtes, natives SVG.",
-    "id": 9,
-    "link": "projektdetail.html",
-    "tags": [
-      "Architecture",
-      "SVG"
-    ],
-    "title": "Mesh Network Graph"
-  },
-  {
-    "category": "engineering",
-    "desc": "Web-basiertes Interface für LLVM-Compiler-Ausgaben mit Syntax-Highlighting.",
-    "id": 10,
-    "link": "projektdetail.html",
-    "tags": [
-      "Engineering",
-      "Compilers"
-    ],
-    "title": "Core Compiler Bridge"
-  }
-]
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "Projekte",
+      "url": "projekte.html"
+    },
+    {
+      "title": "Contact",
+      "url": "kontakt.html"
+    }
+  ],
+  "projects": [
+    {
+      "architecture": [
+        {
+          "text": "Die Datenströme werden über native ECMA-Proxies direkt überwacht und ohne Rendering-Verzögerung verarbeitet.",
+          "title": "01 // Proxy Data Ingestion"
+        },
+        {
+          "text": "Das gesamte visuelle Feedback steuert sich dynamisch über atomare CSS Custom Properties für minimale CPU-Last.",
+          "title": "02 // CSS Variable Layering"
+        },
+        {
+          "text": "Der Script-Aufbau verhindert Speicherlecks durch saubere Event-Listener Deregistrierung beim View-Wechsel.",
+          "title": "03 // Garbage Compaction"
+        }
+      ],
+      "category": "engineering",
+      "desc": "Natives High-Performance Modul für asynchrone Berechnungen im Browser.",
+      "id": 1,
+      "images": [
+        "../img/fintech-hero.jpg",
+        "../img/fintech-ui.jpg",
+        "../img/fintech-mobile.jpg",
+        "../img/fintech-code.jpg",
+        "../img/fintech-bench.jpg"
+      ],
+      "outcome": "Konstante 60 FPS Scroll-Performance bei massiven Auslastungen.",
+      "roleScope": "Lead System Engineer & Interface Architect",
+      "tags": [
+        "Engineering",
+        "WASM"
+      ],
+      "techStack": "Native CSS Grid, Vanilla JS Object Architecture, Service Workers",
+      "title": "Fintech Core Engine"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Keine Generierung von Tausenden CSS-Klassen, sondern Nutzung nativer Style-Kapselung.",
+          "title": "01 // Zero Utility Overhead"
+        }
+      ],
+      "category": "ui-ux",
+      "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
+      "id": 2,
+      "images": [
+        "../img/light-hero.jpg",
+        "../img/light-dashboard.jpg"
+      ],
+      "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
+      "roleScope": "Senior UI Designer",
+      "tags": [
+        "UI/UX",
+        "Design System"
+      ],
+      "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
+      "title": "Light Speed Frame"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Keine Generierung von Tausenden CSS-Klassen, sondern Nutzung nativer Style-Kapselung.",
+          "title": "01 // Zero Utility Overhead"
+        }
+      ],
+      "category": "ui-ux",
+      "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
+      "id": 3,
+      "images": [
+        "../img/light-hero.jpg",
+        "../img/light-dashboard.jpg"
+      ],
+      "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
+      "roleScope": "Senior UI Designer",
+      "tags": [
+        "UI/UX",
+        "Design System"
+      ],
+      "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
+      "title": "Test Project"
+    }
+  ]
+}

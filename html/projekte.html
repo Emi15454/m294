@@ -139,26 +139,6 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      // Automatischer Klonprozess, um das Grid auf exakt 10 operative Karten aufzustocken
-      document.addEventListener("DOMContentLoaded", () => {
-        const grid = document.querySelector(".project-grid");
-        const cards = document.querySelectorAll(".project-card");
-        for (let i = 0; i < 5; i++) {
-          cards.forEach((card) => {
-            if (grid.children.length < 10) {
-              let clone = card.cloneNode(true);
-              let currentNum = grid.children.length + 1;
-              clone.querySelector("h3").innerText =
-                (currentNum < 10 ? "0" : "") +
-                currentNum +
-                " // Subsystem Module";
-              grid.appendChild(clone);
-            }
-          });
-        }
-      });
-    </script>
   </body>
+  <script src="../js/main.js"></script>
 </html>
