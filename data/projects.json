@@ -1,0 +1,112 @@
+[
+  {
+    "category": "Test12344",
+    "desc": "a Test projecct.",
+    "id": 1,
+    "link": "projektdetail.html",
+    "tags": [
+      "testTag1",
+      "TestTag2"
+    ],
+    "title": "Testprojekt"
+  },
+  {
+    "category": "ui-ux",
+    "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
+    "id": 2,
+    "link": "projektdetail.html",
+    "tags": [
+      "UI/UX",
+      "Design System"
+    ],
+    "title": "Light Speed Frame"
+  },
+  {
+    "category": "architecture",
+    "desc": "Echtzeit-Visualisierung komplexer Datenströme über native Web Workers.",
+    "id": 3,
+    "link": "projektdetail.html",
+    "tags": [
+      "Architecture",
+      "Big Data"
+    ],
+    "title": "Quantum Analytics"
+  },
+  {
+    "category": "engineering",
+    "desc": "Sicheres, barrierefreies Interface zur Validierung von Blockchain-Transaktionen.",
+    "id": 4,
+    "link": "projektdetail.html",
+    "tags": [
+      "Engineering",
+      "Security"
+    ],
+    "title": "Crypto Ledger UI"
+  },
+  {
+    "category": "ui-ux",
+    "desc": "B2B-Dashboard mit flexiblen Grid-Modulen und individualisierbaren Ansichten.",
+    "id": 5,
+    "link": "projektdetail.html",
+    "tags": [
+      "UI/UX",
+      "Saas"
+    ],
+    "title": "SaaS Matrix Dashboard"
+  },
+  {
+    "category": "architecture",
+    "desc": "Dezentrale Steuerungseinheit für IoT-Geräte, gekapselt in Vanilla JS.",
+    "id": 6,
+    "link": "projektdetail.html",
+    "tags": [
+      "Architecture",
+      "IoT"
+    ],
+    "title": "Autonomous System Node"
+  },
+  {
+    "category": "ui-ux",
+    "desc": "Konzeptionelle Web-Oberfläche für neuronale Telemetriedaten-Analyse.",
+    "id": 7,
+    "link": "projektdetail.html",
+    "tags": [
+      "UI/UX",
+      "BioTech"
+    ],
+    "title": "Neural Interface Mock"
+  },
+  {
+    "category": "engineering",
+    "desc": "In-Browser Bild- und Asset-Kompressor unter intensiver Nutzung der Canvas API.",
+    "id": 8,
+    "link": "projektdetail.html",
+    "tags": [
+      "Engineering",
+      "Build"
+    ],
+    "title": "Asset Pipeline Tool"
+  },
+  {
+    "category": "architecture",
+    "desc": "Interaktive Netzwerkgrafik, gerendert über hardwarebeschleunigtes, natives SVG.",
+    "id": 9,
+    "link": "projektdetail.html",
+    "tags": [
+      "Architecture",
+      "SVG"
+    ],
+    "title": "Mesh Network Graph"
+  },
+  {
+    "category": "engineering",
+    "desc": "Web-basiertes Interface für LLVM-Compiler-Ausgaben mit Syntax-Highlighting.",
+    "id": 10,
+    "link": "projektdetail.html",
+    "tags": [
+      "Engineering",
+      "Compilers"
+    ],
+    "title": "Core Compiler Bridge"
+  }
+]
