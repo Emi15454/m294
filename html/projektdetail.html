@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt Details | Premium Portfolio</title>
+    <title>Projekt Details | Case Study</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <div class="logo">[Mein Name] <span>| Developer</span></div>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">Home</a></li>
@@ -23,76 +23,138 @@
       </div>
     </header>
 
-    <main class="container section-spacing">
-      <div class="detail-grid">
-        <section class="media-stack" aria-label="Projekt Medien">
-          <video
-            class="media-placeholder-video"
-            controls
-            poster=""
-            preload="metadata"
+    <main>
+      <div class="container section-spacing">
+        <div class="detail-grid">
+          <section class="project-gallery" aria-label="Projekt visuelle Belege">
+            <div
+              class="gallery-item featured"
+              role="img"
+              aria-label="Dominantes Hero-Mockup"
+            ></div>
+            <div
+              class="gallery-item"
+              role="img"
+              aria-label="Detail-Ansicht UI-Komponente"
+            ></div>
+            <div
+              class="gallery-item"
+              role="img"
+              aria-label="Mobile View Implementation"
+            ></div>
+            <div
+              class="gallery-item"
+              role="img"
+              aria-label="Code Struktur"
+            ></div>
+            <div
+              class="gallery-item"
+              role="img"
+              aria-label="Performance Benchmarks"
+            ></div>
+          </section>
+
+          <aside class="sidebar-sticky">
+            <div>
+              <span
+                style="
+                  font-size: var(--fs-small);
+                  color: var(--accent);
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                "
+                >Case Study</span
+              >
+              <h1
+                style="
+                  font-size: var(--fs-h2);
+                  margin-top: var(--space-xs);
+                  margin-bottom: var(--space-sm);
+                "
+              >
+                Fintech System Engine
+              </h1>
+              <p>
+                Ich habe dieses System konzipiert, um massiven Daten-Overhead im
+                Browser zu neutralisieren. Durch den strikten Verzicht auf
+                schwerfällige Virtual-DOM Bibliotheken verarbeitet die Anwendung
+                Millionen Transaktionen latenzfrei direkt im nativen
+                User-Interface.
+              </p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color)" />
+
+            <div class="meta-block">
+              <h3>Architektur-Verantwortung</h3>
+              <p>Lead System Engineer & Interface Architect</p>
+            </div>
+
+            <div class="meta-block">
+              <h3>Technologien</h3>
+              <p>
+                Native CSS Grid, Vanilla JS Object Architecture, Service Workers
+              </p>
+            </div>
+
+            <div class="meta-block">
+              <h3>Messbarer Outcome</h3>
+              <p>
+                Konstante 60 FPS Scroll-Performance bei massiven Auslastungen.
+              </p>
+            </div>
+
+            <a
+              href="kontakt.html"
+              class="btn btn-primary"
+              style="text-align: center"
+              >Projekt-Infrastruktur anfragen</a
+            >
+          </aside>
+        </div>
+      </div>
+
+      <section class="architecture-breakdown" aria-labelledby="arch-title">
+        <div class="container">
+          <h2
+            id="arch-title"
+            style="margin-bottom: var(--space-xl); font-size: var(--fs-h2)"
           >
-            <source src="assets/video-placeholder.mp4" type="video/mp4" />
-            Ihr Browser unterstützt das Video-Tag nicht.
-          </video>
-          <div class="card-image" style="aspect-ratio: 16/9"></div>
-          <div class="card-image" style="aspect-ratio: 16/9"></div>
-        </section>
+            Technische Architektur
+          </h2>
 
-        <aside class="sidebar-sticky">
-          <div>
-            <h1 style="font-size: var(--fs-h2); margin-bottom: var(--space-sm)">
-              Case Study // Fintech Core
-            </h1>
-            <p style="margin-bottom: var(--space-md)">
-              Ich habe dieses System von Grund auf so konzipiert, dass
-              Daten-Pipelines direkt im Browser verarbeitet werden. Kein
-              Virtual-DOM Overhead, maximale Performance für geschäftskritische
-              Krypto-Transaktionen.
-            </p>
-            <h3
-              style="
-                font-size: var(--fs-small);
-                text-transform: uppercase;
-                margin-bottom: var(--space-xs);
-              "
-            >
-              Meine Rolle
-            </h3>
-            <p
-              style="font-size: var(--fs-small); margin-bottom: var(--space-md)"
-            >
-              Sole Lead UI Engineer & System Architect
-            </p>
-          </div>
-
-          <hr style="border: 0; border-top: 1px solid var(--border-color)" />
-
-          <div class="calendar-widget-placeholder">
-            <h3 style="margin-bottom: var(--space-xs)">
-              Deep-Dive Session buchen
-            </h3>
-            <p
-              style="font-size: var(--fs-small); margin-bottom: var(--space-lg)"
-            >
-              Lass uns die Architektur dieses Projekts per Screen-Share
-              analysieren.
-            </p>
-
-            <div id="cal-com-widget" style="width: 100%">
-              <button class="btn btn-primary" style="width: 100%">
-                Terminkalender laden
-              </button>
+          <div class="architecture-grid">
+            <div class="arch-card">
+              <h4>01 // Proxy Data Ingestion</h4>
+              <p>
+                Die Datenströme werden über native ECMA-Proxies direkt überwacht
+                und ohne Rendering-Verzögerung verarbeitet.
+              </p>
+            </div>
+            <div class="arch-card">
+              <h4>02 // CSS Variable Layering</h4>
+              <p>
+                Das gesamte visuelle Feedback steuert sich dynamisch über
+                atomare CSS Custom Properties für minimale CPU-Last.
+              </p>
+            </div>
+            <div class="arch-card">
+              <h4>03 // Garbage Compaction</h4>
+              <p>
+                Der Script-Aufbau verhindert Speicherlecks durch saubere
+                Event-Listener Deregistrierung beim View-Wechsel.
+              </p>
             </div>
           </div>
-        </aside>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
         <div class="footer-bottom">
-          <p>&copy; 2026 [Mein Name]. Zero Framework Policy.</p>
+          <p>&copy; 2026 [Mein Name]. Structural UI Integrity.</p>
         </div>
       </div>
     </footer>

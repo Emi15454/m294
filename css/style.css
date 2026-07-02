@@ -1,23 +1,23 @@
 /* ==========================================================================
-   HIGH-CONTRAST MINIMALIST DESIGN SYSTEM
+   HIGH-CONTRAST MINIMALIST DESIGN SYSTEM & TOKENS
    ========================================================================== */
 
 :root {
   /* Farb-Tokens */
   --bg-primary: #0d0d0d;
-  /* Tiefes Schwarzgrau */
+  /* Tiefes Schwarzgrau für globalen Hintergrund */
   --bg-secondary: #1a1a1a;
-  /* Surface / Karten / Felder */
+  /* Surface-Farbe für Karten, Formularfelder, Sektionen */
   --text-main: #f9f9f9;
-  /* Nahezu Weiß für Core-Inhalte */
+  /* Nahezu Weiß für maximale Lesbarkeit */
   --text-muted: #a1a1aa;
-  /* Kühles Mittelgrau für Fließtext */
+  /* Mittleres Grau für sekundäre Texte */
   --accent: #3b82f6;
-  /* Strahlendes Königsblau */
+  /* Königsblau als primärer Interaktionsfokus */
   --accent-hover: #60a5fa;
-  /* Hellere Nuance für Interaktionen */
+  /* Hellere Nuance für Hover-Zustände */
   --border-color: #27272a;
-  /* Subtiles Trenngrau */
+  /* Subtile Trennlinien */
 
   /* 8px-Rastersystem */
   --space-xs: 8px;
@@ -27,7 +27,7 @@
   --space-xl: 64px;
   --space-xxl: 128px;
 
-  /* Typografie (Fokus auf Inter / System-Sans) */
+  /* Fluid-Typografie (Skaliert dynamisch über den Viewport via clamp) */
   --fs-h1: clamp(2.5rem, 5vw + 1rem, 4.5rem);
   --fs-h2: clamp(1.85rem, 3.5vw + 1rem, 2.75rem);
   --fs-h3: clamp(1.25rem, 1.5vw + 1rem, 1.75rem);
@@ -36,7 +36,7 @@
 }
 
 /* ==========================================================================
-   GLOBAL RESETS
+   GLOBAL RESETS & CORE ELEMENT STYLES
    ========================================================================== */
 
 *,
@@ -63,10 +63,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Typografie Core */
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -83,10 +83,10 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+/* Layout-Hilfsklassen */
 .container {
   width: 100%;
   max-width: 1200px;
-  /* Laut Konzept */
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
@@ -96,7 +96,7 @@ a {
 }
 
 /* ==========================================================================
-   KOMPONENTEN & SEKTIONEN
+   WIEVERWENDBARE COMPONENT-TOKENS (FIGMA DESIGN SYSTEM)
    ========================================================================== */
 
 /* Header & Navigation */
@@ -147,31 +147,11 @@ a {
   color: var(--text-main);
 }
 
-/* Hero Sektion */
-.hero {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.hero-pitch {
-  font-size: var(--fs-h1);
-  max-width: 20ch;
-  margin-bottom: var(--space-md);
-}
-
-.hero-lead {
-  font-size: var(--fs-h3);
-  max-width: 40ch;
-  margin-bottom: var(--space-xl);
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: var(--space-sm) var(--space-lg);
   font-size: var(--fs-small);
   font-weight: 600;
@@ -180,19 +160,19 @@ a {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
+  border: none;
 }
 
 .btn-primary {
   background-color: var(--accent);
   color: var(--text-main);
-  border: none;
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
 }
 
-/* Projekt-Grid (3 Spalten) */
+/* Universelles Projekt-Grid (Responsive 3-Spalten-Layout) */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -207,6 +187,7 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: border-color 0.2s ease;
 }
 
 .project-card:hover {
@@ -216,8 +197,20 @@ a {
 .card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-color: var(--bg-primary);
+  background-color: #222;
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.card-image::before {
+  content: "Project Asset";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--border-color);
+  font-size: var(--fs-small);
+  text-transform: uppercase;
 }
 
 .card-body {
@@ -257,7 +250,32 @@ a {
   color: var(--accent);
 }
 
-/* Newsletter-Formular Sektion */
+/* ==========================================================================
+   SEKTIONS-SPEZIFISCHE LAYOUT MODULE
+   ========================================================================== */
+
+/* Hero Bereich (index.html) */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-pitch {
+  font-size: var(--fs-h1);
+  max-width: 20ch;
+  margin-bottom: var(--space-md);
+}
+
+.hero-lead {
+  font-size: var(--fs-h3);
+  max-width: 40ch;
+  margin-bottom: var(--space-xl);
+}
+
+/* Newsletter Modul */
 .newsletter {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -301,7 +319,235 @@ a {
   border-color: var(--accent);
 }
 
-/* Footer Architecture */
+/* Filter Bar (projekte.html) */
+.filter-bar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+  list-style: none;
+}
+
+.filter-pill {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 30px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+.filter-pill.active {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+}
+
+/* Asymmetrisches Spalten-Grid & Galerie (projektdetail.html) */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-bottom: var(--space-xxl);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item.featured {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-item::before {
+  content: "Interface Capture";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #27272a;
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 112px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.meta-block h3 {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+/* Whitespace Compensation Layer (Full-Width Sektion unten) */
+.architecture-breakdown {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-xl) 0;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.arch-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.arch-card h4 {
+  font-size: var(--fs-h3);
+  color: var(--text-main);
+}
+
+/* Profil & Formulare (kontakt.html) */
+.split-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+}
+
+.profile-image-placeholder::before {
+  content: "[ Portrait Matrix ]";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.tech-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  list-style: none;
+}
+
+.tech-tag {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  font-size: var(--fs-small);
+  border-radius: 4px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  width: 100%;
+  padding: var(--space-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+  pointer-events: none;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: var(--space-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   GLOBAL FOOTER ARCHITECTURE
+   ========================================================================== */
+
 .site-footer {
   background-color: var(--bg-primary);
   border-top: 1px solid var(--border-color);
@@ -355,7 +601,6 @@ a {
 @media (max-width: 1024px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* Tablet: 2 Spalten */
   }
 
   .newsletter-inner {
@@ -369,10 +614,26 @@ a {
   }
 }
 
+@media (max-width: 968px) {
+  .detail-grid,
+  .split-profile-grid,
+  .architecture-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item.featured {
+    grid-column: span 1;
+  }
+}
+
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
-    /* Mobile: 1 Spalte */
   }
 
   .header-inner,
@@ -389,252 +650,5 @@ a {
 
   .newsletter-form {
     flex-direction: column;
-  }
-}
-
-/* ==========================================================================
-   PROJEKTÜBERSICHT (projekte.html) EXTENSIONS
-   ========================================================================== */
-
-/* Filter-Bar Flexbox System */
-.filter-bar {
-  display: flex;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-  margin-bottom: var(--space-xl);
-  list-style: none;
-}
-
-.filter-pill {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 30px;
-  /* Perfekte Pillenform */
-  font-size: var(--fs-small);
-  font-weight: 600;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.filter-pill:hover {
-  border-color: var(--text-main);
-  color: var(--text-main);
-}
-
-/* Aktiv Invertiert Zustand */
-.filter-pill.active {
-  background-color: var(--text-main);
-  color: var(--bg-primary);
-  border-color: var(--text-main);
-}
-
-/* Bookmark Herz-Icon */
-.bookmark-btn {
-  position: absolute;
-  top: var(--space-sm);
-  right: var(--space-sm);
-  background-color: rgba(13, 13, 13, 0.7);
-  border: 1px solid var(--border-color);
-  color: var(--text-muted);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  backdrop-filter: blur(4px);
-  z-index: 10;
-  transition: all 0.2s ease;
-}
-
-.bookmark-btn:hover {
-  color: #ef4444;
-  border-color: #ef4444;
-  transform: scale(1.05);
-}
-
-.bookmark-btn svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-/* ==========================================================================
-   PROJEKTDETAIL (projektdetail.html) EXTENSIONS
-   ========================================================================== */
-
-/* Asymmetrisches 2-Spalten-Grid (60% / 40%) */
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  /* Entspricht exakt dem 60% zu 40% Verhältnis */
-  gap: var(--space-xl);
-  align-items: start;
-}
-
-.media-stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.media-placeholder-video {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-}
-
-.sidebar-sticky {
-  position: sticky;
-  top: 112px;
-  /* Header-Höhe + Padding */
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-/* Widget Container */
-.calendar-widget-placeholder {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: var(--space-lg);
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* ==========================================================================
-   KONTAKT & ÜBER MICH (kontakt.html) EXTENSIONS
-   ========================================================================== */
-
-.split-profile-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: var(--space-xl);
-  align-items: center;
-  margin-bottom: var(--space-xxl);
-}
-
-.profile-image-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  /* Quadratisch laut Blueprint */
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  position: relative;
-}
-
-.profile-image-placeholder::before {
-  content: "[ Profilbild ]";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--text-muted);
-  font-size: var(--fs-small);
-}
-
-.tech-tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-top: var(--space-sm);
-  list-style: none;
-}
-
-.tech-tag {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  padding: 4px 12px;
-  font-size: var(--fs-small);
-  border-radius: 4px;
-}
-
-/* Stilisierter Custom Select Dropdown */
-.select-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.custom-select {
-  width: 100%;
-  padding: var(--space-sm);
-  background-color: var(--bg-secondary);
-  /* Vorgabe: Input auf bg-secondary */
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  font-family: inherit;
-  font-size: var(--fs-body);
-  border-radius: 4px;
-  appearance: none;
-  /* Deaktiviert nativen Browser-Arrow */
-  -webkit-appearance: none;
-  cursor: pointer;
-}
-
-.custom-select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* Eigener Custom-Pfeil über CSS-Pseudo-Element */
-.select-wrapper::after {
-  content: "";
-  position: absolute;
-  right: var(--space-sm);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid var(--text-muted);
-  pointer-events: none;
-}
-
-.form-textarea {
-  width: 100%;
-  min-height: 150px;
-  padding: var(--space-sm);
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  font-family: inherit;
-  font-size: var(--fs-body);
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.form-textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.form-stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Responsive Fallbacks */
-@media (max-width: 968px) {
-  .detail-grid,
-  .split-profile-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
   }
 }

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekte | Premium Portfolio</title>
+    <title>Developer Portfolio | Projekte</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <div class="logo">[Mein Name] <span>| Developer</span></div>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">Home</a></li>
@@ -29,7 +29,7 @@
     </header>
 
     <main class="container section-spacing">
-      <h1 style="margin-bottom: var(--space-md)">Archivierte Arbeiten</h1>
+      <h1 style="margin-bottom: var(--space-md)">Projekt-Archiv</h1>
 
       <ul class="filter-bar" role="tablist" aria-label="Projekte filtern">
         <li>
@@ -49,71 +49,41 @@
         </li>
         <li>
           <button class="filter-pill" role="tab" aria-selected="false">
-            Architecture
+            Core Dev
           </button>
         </li>
       </ul>
 
       <div class="project-grid">
-        <article class="project-card" style="position: relative">
-          <button class="bookmark-btn" aria-label="Projekt bookmarken">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-              />
-            </svg>
-          </button>
+        <article class="project-card">
           <div class="card-image"></div>
           <div class="card-body">
             <div class="card-tags"><span class="tag">Engineering</span></div>
-            <h3>01 // Core Engine</h3>
+            <h3>01 // High Performance Engine</h3>
             <p class="card-text">
-              Natives High-Performance Modul für asynchrone Berechnungen im
-              Browser.
+              Natives Steuerungsmodul zur asynchronen
+              Hintergrunddaten-Verarbeitung.
             </p>
             <a href="projektdetail.html" class="card-link"
-              >Analyse offenes Projekt &rarr;</a
+              >Analyse ansehen &rarr;</a
             >
           </div>
         </article>
 
-        <article class="project-card" style="position: relative">
-          <button class="bookmark-btn" aria-label="Projekt bookmarken">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-              />
-            </svg>
-          </button>
+        <article class="project-card">
           <div class="card-image"></div>
           <div class="card-body">
             <div class="card-tags"><span class="tag">UI/UX</span></div>
-            <h3>02 // Light Speed Frame</h3>
+            <h3>02 // Operational Interface</h3>
             <p class="card-text">
-              Design-System, das ohne Stylesheets auskommt und rein über
-              CSS-Hooks arbeitet.
+              System-Oberfläche konzipiert für minimale Klickpfade und maximale
+              Übersicht.
             </p>
             <a href="projektdetail.html" class="card-link"
-              >Analyse offenes Projekt &rarr;</a
+              >Analyse ansehen &rarr;</a
             >
           </div>
         </article>
-
-        <script>
-          // Einfacher Inline-Klon-Helfer für die lokale Entwicklungsphase, um 10 Karten im Grid visuell zu testen:
-          document.addEventListener("DOMContentLoaded", () => {
-            const grid = document.querySelector(".project-grid");
-            const cards = document.querySelectorAll(".project-card");
-            // Wir klonen die vorhandenen Karten, bis wir exakt 10 haben
-            for (let i = 0; i < 4; i++) {
-              cards.forEach((card) => {
-                if (grid.children.length < 10) {
-                  grid.appendChild(card.cloneNode(true));
-                }
-              });
-            }
-          });
-        </script>
       </div>
     </main>
 
@@ -121,7 +91,7 @@
       <div class="container">
         <div class="footer-inner">
           <div class="footer-col">
-            <h4>Sitemap</h4>
+            <h4>Navigation</h4>
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="projekte.html">Projekte</a></li>
@@ -144,9 +114,30 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 [Mein Name]. Custom Code Architecture.</p>
+          <p>&copy; 2026 [Mein Name]. Clean Semantic Code.</p>
         </div>
       </div>
     </footer>
+
+    <script>
+      // Automatischer Klonprozess, um das Grid auf exakt 10 operative Karten aufzustocken
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.querySelector(".project-grid");
+        const cards = document.querySelectorAll(".project-card");
+        for (let i = 0; i < 5; i++) {
+          cards.forEach((card) => {
+            if (grid.children.length < 10) {
+              let clone = card.cloneNode(true);
+              let currentNum = grid.children.length + 1;
+              clone.querySelector("h3").innerText =
+                (currentNum < 10 ? "0" : "") +
+                currentNum +
+                " // Subsystem Module";
+              grid.appendChild(clone);
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

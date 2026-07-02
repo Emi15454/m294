@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Mein Name] | Premium Portfolio</title>
+    <title>Developer Portfolio | Home</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <div class="logo">[Mein Name] <span>| Developer</span></div>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li>
@@ -18,7 +19,7 @@
               >
             </li>
             <li><a href="projekte.html" class="nav-link">Projekte</a></li>
-            <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+            <li><a href="kontakt.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -26,82 +27,68 @@
 
     <main>
       <section class="container hero" aria-label="Vorstellung">
-        <h1 class="hero-pitch">Design trifft auf kompromisslosen Code.</h1>
+        <h1 class="hero-pitch">Nativer Code. Kompromisslose Performance.</h1>
         <p class="hero-lead">
-          Ich entwickle digitale Interfaces mit klarem typografischem Fokus,
-          extrem hohen Kontrasten und nativer Performance.
+          Ich entwickle digitale Systeme ohne den Overhead schwerer Frameworks –
+          fokussiert auf maximale Geschwindigkeit und Semantik.
         </p>
-        <a href="projekte.html" class="btn btn-primary">Arbeiten ansehen</a>
+        <a href="projekte.html" class="btn btn-primary">Projekte explorieren</a>
       </section>
 
       <section
         class="container section-spacing"
-        aria-labelledby="heading-projects"
+        aria-labelledby="heading-latest"
       >
-        <h2 id="heading-projects">Aktuelle Projekte</h2>
-
+        <h2 id="heading-latest">Aktuelle Projekte</h2>
         <div class="project-grid">
           <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
+            <div class="card-image"></div>
             <div class="card-body">
               <div class="card-tags">
                 <span class="tag">UI/UX</span>
+                <span class="tag">Architecture</span>
+              </div>
+              <h3>Fintech System</h3>
+              <p class="card-text">
+                Skalierbares Echtzeit-Interface optimiert für hochfrequente
+                Datenströme im Web.
+              </p>
+              <a href="projektdetail.html" class="card-link"
+                >Case Study lesen &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image"></div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Core Engine</span>
+              </div>
+              <h3>E-Commerce Kernel</h3>
+              <p class="card-text">
+                Ein modulares Web-System mit ultraschnellen Ladezeiten und
+                kompromissloser Barrierefreiheit.
+              </p>
+              <a href="projektdetail.html" class="card-link"
+                >Case Study lesen &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-image"></div>
+            <div class="card-body">
+              <div class="card-tags">
                 <span class="tag">Engineering</span>
               </div>
-              <h3>Fintech Dashboard</h3>
+              <h3>Web Components Library</h3>
               <p class="card-text">
-                Ein hoch-kontrastreiches Interface zur Echtzeitanalyse komplexer
-                Transaktionsdaten.
+                Framework-agnostische Oberflächen-Komponenten gebaut auf rein
+                nativen Web-Standards.
               </p>
               <a href="projektdetail.html" class="card-link"
-                >Projekt ansehen &rarr;</a
-              >
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="tag">Typography</span>
-                <span class="tag">Frontend</span>
-              </div>
-              <h3>E-Commerce Core</h3>
-              <p class="card-text">
-                Minimalistischer Onlineshop mit dem Fokus auf radikal schnelle
-                Ladezeiten und Lesbarkeit.
-              </p>
-              <a href="projektdetail.html" class="card-link"
-                >Projekt ansehen &rarr;</a
-              >
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="tag">Design System</span>
-              </div>
-              <h3>Crypto Token Brand</h3>
-              <p class="card-text">
-                Konzeption und native Entwicklung eines skalierbaren
-                UI-Komponentensystems.
-              </p>
-              <a href="projektdetail.html" class="card-link"
-                >Projekt ansehen &rarr;</a
+                >Case Study lesen &rarr;</a
               >
             </div>
           </article>
@@ -110,21 +97,21 @@
 
       <section
         class="newsletter section-spacing"
-        aria-labelledby="heading-newsletter"
+        aria-labelledby="heading-news"
       >
         <div class="container newsletter-inner">
           <div class="newsletter-text">
-            <h2 id="heading-newsletter">Insights abonnieren</h2>
+            <h2 id="heading-news">Technical Insights</h2>
             <p>
-              Erhalte monatlich fundierte Artikel über UI-Architektur, native
-              Webtechnologien und minimalistisches Design.
+              Abonniere tiefgehende Analysen zu Web-Performance, Semantik und
+              systemnahem Interface-Engineering.
             </p>
           </div>
           <form class="newsletter-form" action="#" method="POST" novalidate>
             <input
               type="email"
               class="input-field"
-              placeholder="Deine E-Mail-Adresse"
+              placeholder="E-Mail-Adresse eingeben"
               required
               aria-label="E-Mail-Adresse für Newsletter"
             />
@@ -142,7 +129,7 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="projekte.html">Projekte</a></li>
-              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="kontakt.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -162,7 +149,7 @@
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 [Mein Name]. Alle Rechte vorbehalten.</p>
-          <p>Fokus auf das Wesentliche.</p>
+          <p>No Framework Blueprint.</p>
         </div>
       </div>
     </footer>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About & Contact | Premium Portfolio</title>
+    <title>Developer Portfolio | Contact</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <div class="logo">[Mein Name] <span>| Developer</span></div>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li><a href="index.html" class="nav-link">Home</a></li>
@@ -26,59 +26,59 @@
     </header>
 
     <main class="container section-spacing">
-      <section class="split-profile-grid" aria-label="Über mich">
+      <section class="split-profile-grid" aria-label="Über mich & Vision">
         <div class="profile-image-placeholder"></div>
         <div>
-          <h1 style="margin-bottom: var(--space-sm)">Meine Philosophie</h1>
+          <h1 style="margin-bottom: var(--space-sm)">
+            Meine Arbeitsphilosophie
+          </h1>
           <p style="margin-bottom: var(--space-md)">
-            Ich betrachte das Web als Plattform für rohe Performance.
-            Abstraktionsschichten und schwere JavaScript-Frameworks verfälschen
-            oft die eigentliche Experience. Ich schreibe wartbaren, nativen Code
-            für anspruchsvolle Auftraggeber.
+            Ich entwickele Software aus der Überzeugung heraus, dass das Web
+            keine schwerfälligen Abstraktionsebenen braucht, sondern saubere
+            native Strukturen. Ich biete fundiertes Frontend-Engineering und
+            performante UI-Architekturen für komplexe Web-Systeme.
           </p>
-          <h3>Expertise Stack</h3>
+          <h3>Fokus-Stack</h3>
           <ul class="tech-tag-list">
-            <li class="tech-tag">HTML5 Semantics</li>
-            <li class="tech-tag">CSS3 Grid / Custom Properties</li>
-            <li class="tech-tag">Vanilla ECMA JavaScript</li>
-            <li class="tech-tag">Web Components</li>
+            <li class="tech-tag">HTML5 Application Semantics</li>
+            <li class="tech-tag">Pure CSS Grid & Custom Property State</li>
+            <li class="tech-tag">Vanilla JavaScript (ES6+)</li>
+            <li class="tech-tag">Performance Auditing</li>
           </ul>
         </div>
       </section>
 
       <section
-        aria-labelledby="contact-heading"
+        aria-labelledby="form-title"
         style="
           border-top: 1px solid var(--border-color);
           padding-top: var(--space-xxl);
         "
       >
         <div style="text-align: center; margin-bottom: var(--space-xl)">
-          <h2 id="contact-heading">Projekt starten</h2>
-          <p>Lass uns über deine technische Infrastruktur sprechen.</p>
+          <h2 id="form-title">Infrastruktur-Projekt besprechen</h2>
+          <p>Wähle das entsprechende Fachgebiet für eine direkte Zuweisung.</p>
         </div>
 
         <form class="form-stack" action="#" method="POST">
           <div>
             <label
-              for="subject"
+              for="routing-subject"
               style="
                 display: block;
                 font-size: var(--fs-small);
                 margin-bottom: var(--space-xs);
               "
-              >Betreffzeile (Zuweisung)</label
+              >Projektfokus (Automatische Zuordnung)</label
             >
             <div class="select-wrapper">
-              <select id="subject" class="custom-select" name="subject">
-                <option value="architecture">
+              <select id="routing-subject" class="custom-select" name="subject">
+                <option value="ui-engineering">
                   UI-Architecture / Core Engineering
                 </option>
-                <option value="design-system">
-                  Design System Implementation
-                </option>
-                <option value="consulting">
-                  Technisches Consulting / Performance-Audit
+                <option value="design-system">Design System Integration</option>
+                <option value="performance-audit">
+                  Performance Audit & Refactoring
                 </option>
               </select>
             </div>
@@ -86,18 +86,18 @@
 
           <div>
             <label
-              for="msg"
+              for="project-details"
               style="
                 display: block;
                 font-size: var(--fs-small);
                 margin-bottom: var(--space-xs);
               "
-              >Projekt-Details (Ich-Form)</label
+              >Projektdetails & Anforderungen</label
             >
             <textarea
-              id="msg"
+              id="project-details"
               class="form-textarea"
-              placeholder="Beschreibe kurz dein Vorhaben..."
+              placeholder="Beschreibe kurz deine technische Ausgangslage..."
               name="message"
               required
             ></textarea>
@@ -108,7 +108,7 @@
             class="btn btn-primary"
             style="align-self: flex-start"
           >
-            Anfrage absenden
+            Anfrage einreichen
           </button>
         </form>
       </section>
@@ -117,7 +117,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-bottom">
-          <p>&copy; 2026 [Mein Name]. Built with Passion & Native Code.</p>
+          <p>&copy; 2026 [Mein Name]. 100% Native Architecture.</p>
         </div>
       </div>
     </footer>
