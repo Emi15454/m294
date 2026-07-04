@@ -176,7 +176,6 @@ img {
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.18);
 }
 
 /* Universelles Projekt-Grid (Responsive 3-Spalten-Layout) */
@@ -190,18 +189,18 @@ img {
 .project-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .project-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .card-image {
@@ -426,6 +425,75 @@ img {
   letter-spacing: 0.05em;
   color: var(--accent);
   margin-bottom: var(--space-xs);
+}
+
+.detail-inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.detail-inquiry-form label {
+  font-size: var(--fs-small);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.detail-inquiry-form select,
+.detail-inquiry-form textarea {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: var(--space-sm);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: var(--fs-small);
+}
+
+.detail-inquiry-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.detail-inquiry-form .form-status {
+  font-size: var(--fs-small);
+  color: var(--accent);
+  min-height: 1.2em;
+}
+
+.project-favorite-toggle,
+.favorite-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: var(--fs-small);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-favorite-toggle:hover,
+.favorite-toggle:hover,
+.project-favorite-toggle.active,
+.favorite-toggle.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
 }
 
 /* Whitespace Compensation Layer (Full-Width Sektion unten) */

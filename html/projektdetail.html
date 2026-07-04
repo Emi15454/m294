@@ -63,12 +63,35 @@
               <p></p>
             </div>
 
-            <a
-              href="kontakt.html"
-              class="btn btn-primary"
+            <button
+              type="button"
+              class="btn btn-primary project-favorite-toggle"
               style="text-align: center"
-              >Projekt-Infrastruktur anfragen</a
             >
+              ☆ Projekt merken
+            </button>
+
+            <form id="project-inquiry-form" class="detail-inquiry-form">
+              <label for="inquiry-subject">Betreff</label>
+              <select id="inquiry-subject" name="subject">
+                <option value="Beratung">Beratung</option>
+                <option value="Technische Einschätzung">
+                  Technische Einschätzung
+                </option>
+                <option value="Kickoff">Kickoff</option>
+              </select>
+              <label for="inquiry-message">Anfrage</label>
+              <textarea
+                id="inquiry-message"
+                name="message"
+                rows="4"
+                placeholder="Ich würde gern mehr über dieses Projekt erfahren..."
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Anfrage senden
+              </button>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
           </aside>
         </div>
       </div>

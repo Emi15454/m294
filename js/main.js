@@ -8,6 +8,7 @@ class PortfolioApp {
     this.data = null;
     this.currentFilename =
       window.location.pathname.split("/").pop() || "index.html";
+    this.favorites = this.loadFavorites();
     this.init();
   }
 
@@ -30,6 +31,43 @@ class PortfolioApp {
     } catch (error) {
       console.error("Kritischer Datenfehler:", error);
       return null;
+    }
+  }
+
+  loadFavorites() {
+    try {
+      const saved = localStorage.getItem("portfolio-favorites");
+      return new Set(saved ? JSON.parse(saved) : []);
+    } catch (error) {
+      console.warn("Merkliste konnte nicht geladen werden:", error);
+      return new Set();
+    }
+  }
+
+  saveFavorites() {
+    localStorage.setItem(
+      "portfolio-favorites",
+      JSON.stringify([...this.favorites]),
+    );
+  }
+
+  toggleFavorite(projectId) {
+    if (this.favorites.has(projectId)) {
+      this.favorites.delete(projectId);
+    } else {
+      this.favorites.add(projectId);
+    }
+    this.saveFavorites();
+  }
+
+  isFavorite(projectId) {
+    return this.favorites.has(projectId);
+  }
+
+  updateFavoriteBadge() {
+    const badge = document.querySelector(".favorite-count");
+    if (badge) {
+      badge.textContent = this.favorites.size;
     }
   }
 
@@ -68,6 +106,8 @@ class PortfolioApp {
     if (philosophyEl && this.currentFilename === "kontakt.html") {
       philosophyEl.textContent = this.data.meta.philosophy;
     }
+
+    this.updateFavoriteBadge();
   }
 
   routePageLogic() {
@@ -98,20 +138,40 @@ class PortfolioApp {
     }
 
     container.innerHTML = projects
-      .map(
-        (p) => `
+      .map((p) => {
+        const imageUrl =
+          Array.isArray(p.images) && p.images.length > 0
+            ? p.images[0]
+            : "../img/placeholder-project.jpg";
+        const isFav = this.isFavorite(p.id);
+
+        return `
       <article class="project-card">
-        <div class="card-image"></div>
+        <div class="card-image" style="background-image: url('${imageUrl}'); background-size: cover; background-position: center;"></div>
         <div class="card-body">
           <div class="card-tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
           <h3>${p.title}</h3>
           <p class="card-text">${p.desc}</p>
-          <a href="projektdetail.html?id=${p.id}" class="card-link">Case Study lesen &rarr;</a>
+          <div class="card-actions">
+            <a href="projektdetail.html?id=${p.id}" class="card-link">Case Study lesen &rarr;</a>
+            <button type="button" class="favorite-toggle ${isFav ? "active" : ""}" data-project-id="${p.id}">
+              ${isFav ? "★ Gemerkt" : "☆ Merken"}
+            </button>
+          </div>
         </div>
       </article>
-    `,
-      )
+    `;
+      })
       .join("");
+
+    container.querySelectorAll(".favorite-toggle").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        const projectId = Number(button.dataset.projectId);
+        this.toggleFavorite(projectId);
+        this.renderProjectCards(projects, container);
+      });
+    });
   }
 
   setupCategoryFilters(container) {
@@ -158,6 +218,36 @@ class PortfolioApp {
       if (metaValues[index]) paragraph.textContent = metaValues[index];
     });
 
+    const favoriteButton = document.querySelector(".project-favorite-toggle");
+    if (favoriteButton) {
+      favoriteButton.textContent = this.isFavorite(project.id)
+        ? "★ Projekt gemerkt"
+        : "☆ Projekt merken";
+      favoriteButton.addEventListener("click", () => {
+        this.toggleFavorite(project.id);
+        favoriteButton.textContent = this.isFavorite(project.id)
+          ? "★ Projekt gemerkt"
+          : "☆ Projekt merken";
+        this.updateFavoriteBadge();
+      });
+    }
+
+    const inquiryForm = document.querySelector("#project-inquiry-form");
+    if (inquiryForm) {
+      const statusMessage = inquiryForm.querySelector(".form-status");
+      inquiryForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const subject = inquiryForm.querySelector("select").value;
+        const message = inquiryForm.querySelector("textarea").value.trim();
+        const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[${project.title}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über ${project.title} erfahren.`)}`;
+        window.location.href = mailtoLink;
+        if (statusMessage) {
+          statusMessage.textContent =
+            "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+        }
+      });
+    }
+
     // 2. Galerie dynamisch aufbauen
     const galleryContainer = document.querySelector(".project-gallery");
     if (galleryContainer) {
@@ -175,7 +265,6 @@ class PortfolioApp {
         .join("");
     }
 
-    // 3. Deep-Dive Sektion unten dynamisch aufbauen
     const archGrid = document.querySelector(".architecture-grid");
     if (archGrid) {
       const architectureItems =

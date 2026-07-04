@@ -44,16 +44,11 @@
       "images": [
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "../img/fintech-ui.jpg",
-        "../img/fintech-mobile.jpg",
-        "../img/fintech-code.jpg",
-        "../img/fintech-bench.jpg"
+        "../img/fintech-mobile.jpg"
       ],
       "outcome": "Konstante 60 FPS Scroll-Performance bei massiven Auslastungen.",
       "roleScope": "Lead System Engineer & Interface Architect",
-      "tags": [
-        "Engineering",
-        "WASM"
-      ],
+      "tags": ["Engineering", "WASM"],
       "techStack": "Native CSS Grid, Vanilla JS Object Architecture, Service Workers",
       "title": "Fintech Core Engine"
     },
@@ -67,41 +62,164 @@
       "category": "ui-ux",
       "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
       "id": 2,
-      "images": [
-        "../img/light-hero.jpg",
-        "../img/light-dashboard.jpg"
-      ],
+      "images": ["../img/light-hero.jpg", "../img/light-dashboard.jpg"],
       "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
       "roleScope": "Senior UI Designer",
-      "tags": [
-        "UI/UX",
-        "Design System"
-      ],
+      "tags": ["UI/UX", "Design System"],
       "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
       "title": "Light Speed Frame"
     },
     {
       "architecture": [
         {
-          "text": "Keine Generierung von Tausenden CSS-Klassen, sondern Nutzung nativer Style-Kapselung.",
-          "title": "01 // Zero Utility Overhead"
+          "text": "Modulare Komponentenstruktur mit sauberer Trennung zwischen Daten, Darstellung und Verhalten.",
+          "title": "01 // Component Isolation"
+        }
+      ],
+      "category": "architecture",
+      "desc": "Modulare UI-Bibliothek für skalierbare Webkomponenten ohne Framework-Overhead.",
+      "id": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Reduktion der Entwicklungskomplexität um 37% im Team.",
+      "roleScope": "Frontend Architect",
+      "tags": ["Architecture", "Components"],
+      "techStack": "Web Components, HTML Templates, CSS Variables",
+      "title": "Component Atlas"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Performance-Tracking über Core Web Vitals und gezielte Optimierung der Ladepfade.",
+          "title": "01 // Performance Baseline"
+        }
+      ],
+      "category": "engineering",
+      "desc": "Performancemodul für schnelle Ladezeiten und bessere Core-Web-Vitals-Bewertung.",
+      "id": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Ladezeit um 42% reduziert und Conversion gesteigert.",
+      "roleScope": "Performance Engineer",
+      "tags": ["Engineering", "Performance"],
+      "techStack": "Lighthouse, Web Vitals, Critical CSS",
+      "title": "Pulse Performance Lab"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Konzeptentwicklung für bewusste Informationsarchitektur und klare Nutzungskonzepte.",
+          "title": "01 // UX Strategy"
         }
       ],
       "category": "ui-ux",
-      "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
-      "id": 3,
+      "desc": "Produktive Nutzerführung für komplexe Dashboards und Workflow-Tools.",
+      "id": 5,
       "images": [
-        "../img/light-hero.jpg",
-        "../img/light-dashboard.jpg"
+        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
-      "roleScope": "Senior UI Designer",
-      "tags": [
-        "UI/UX",
-        "Design System"
+      "outcome": "Steigerung der Task-Completion um 28%.",
+      "roleScope": "Senior Product Designer",
+      "tags": ["UI/UX", "Research"],
+      "techStack": "User Flows, Wireframes, Accessibility Audits",
+      "title": "Flow Intelligence"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Native Rendering-Strategie für hohe Interaktivität ohne zusätzliche Framework-Last.",
+          "title": "01 // Render Strategy"
+        }
       ],
-      "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
-      "title": "Test Project"
+      "category": "architecture",
+      "desc": "Architektonische Referenz für native Interfaces mit hoher Wartungsfreundlichkeit.",
+      "id": 6,
+      "images": [
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Skalierbarkeit und Wartbarkeit für zukünftige Erweiterungen verbessert.",
+      "roleScope": "System Architect",
+      "tags": ["Architecture", "Systems"],
+      "techStack": "HTML Semantics, CSS Architecture, Vanilla JS",
+      "title": "Native Systems Stack"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Darstellung komplexer Daten über klare, reduzierte Interface-Muster und Lokalisierung.",
+          "title": "01 // Data Narrative"
+        }
+      ],
+      "category": "ui-ux",
+      "desc": "Informationsarchitektur für datenstarke Dashboards mit hoher Lesbarkeit.",
+      "id": 7,
+      "images": [
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Schnellere Informationsaufnahme um 31%.",
+      "roleScope": "UX Strategist",
+      "tags": ["UI/UX", "Data"],
+      "techStack": "Design Systems, Typography, Data Visualization",
+      "title": "Signal Dashboard"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Sicherer Aufbau von Formular- und Zustandslogik ohne unnötige Abhängigkeiten.",
+          "title": "01 // Form Logic"
+        }
+      ],
+      "category": "engineering",
+      "desc": "Kontextueller Formular-Workflow für komplexe Anfrage- und Booking-Prozesse.",
+      "id": 8,
+      "images": [
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Abbruchquote bei Formularen um 18% reduziert.",
+      "roleScope": "Interaction Engineer",
+      "tags": ["Engineering", "Forms"],
+      "techStack": "Progressive Enhancement, Validation, Accessibility",
+      "title": "Flow Form System"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Kombination aus klarer Informationshierarchie und fokussiertem Visual Design.",
+          "title": "01 // Visual Narrative"
+        }
+      ],
+      "category": "ui-ux",
+      "desc": "Brand-Interface für digitale Produkte mit hoher visueller Klarheit.",
+      "id": 9,
+      "images": [
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Stärkere Markenwahrnehmung und bessere Nutzerbindung.",
+      "roleScope": "Visual Designer",
+      "tags": ["UI/UX", "Brand"],
+      "techStack": "Visual Design, Mockups, Content Systems",
+      "title": "Brand Surface"
+    },
+    {
+      "architecture": [
+        {
+          "text": "Zielgerichtete Optimierung von Interaction Patterns und Micro-Interactions.",
+          "title": "01 // Interaction Detail"
+        }
+      ],
+      "category": "architecture",
+      "desc": "Erweiterte Interface-Patterns für digitale Produkte mit hoher Produktqualität.",
+      "id": 10,
+      "images": [
+        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop"
+      ],
+      "outcome": "Produktqualität und Interaktionsgefühl deutlich verbessert.",
+      "roleScope": "Interface Strategist",
+      "tags": ["Architecture", "Patterns"],
+      "techStack": "Interaction Design, Motion Principles, Accessibility",
+      "title": "Pattern Studio"
     }
   ]
 }
