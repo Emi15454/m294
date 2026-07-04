@@ -145,19 +145,28 @@ class PortfolioApp {
     }
 
     // 1. Texte injizieren
-    document.querySelector(".sidebar-sticky h1").textContent = project.title;
-    document.querySelector(".sidebar-sticky p").textContent = project.desc;
-    document.querySelector(".meta-block:nth-of-type(1) p").textContent =
-      project.roleScope;
-    document.querySelector(".meta-block:nth-of-type(2) p").textContent =
-      project.techStack;
-    document.querySelector(".meta-block:nth-of-type(3) p").textContent =
-      project.outcome;
+    const titleEl = document.querySelector(".sidebar-sticky h1");
+    const descriptionEl = document.querySelector(
+      ".sidebar-sticky > div:first-child p",
+    );
+    if (titleEl) titleEl.textContent = project.title;
+    if (descriptionEl) descriptionEl.textContent = project.desc;
+
+    const metaParagraphs = document.querySelectorAll(".meta-block p");
+    const metaValues = [project.roleScope, project.techStack, project.outcome];
+    metaParagraphs.forEach((paragraph, index) => {
+      if (metaValues[index]) paragraph.textContent = metaValues[index];
+    });
 
     // 2. Galerie dynamisch aufbauen
     const galleryContainer = document.querySelector(".project-gallery");
     if (galleryContainer) {
-      galleryContainer.innerHTML = project.images
+      const galleryImages =
+        Array.isArray(project.images) && project.images.length > 0
+          ? project.images
+          : ["../img/placeholder-project.jpg"];
+
+      galleryContainer.innerHTML = galleryImages
         .map(
           (img, index) => `
         <div class="gallery-item ${index === 0 ? "featured" : ""}" style="background-image: url('${img}'); background-size: cover; background-position: center;"></div>
@@ -169,12 +178,22 @@ class PortfolioApp {
     // 3. Deep-Dive Sektion unten dynamisch aufbauen
     const archGrid = document.querySelector(".architecture-grid");
     if (archGrid) {
-      archGrid.innerHTML = project.architecture
+      const architectureItems =
+        Array.isArray(project.architecture) && project.architecture.length > 0
+          ? project.architecture
+          : [
+              {
+                title: "Projektüberblick",
+                text: "Weitere Details folgen bald.",
+              },
+            ];
+
+      archGrid.innerHTML = architectureItems
         .map(
           (arch) => `
         <div class="arch-card">
-          <h4>${arch.title}</h4>
-          <p>${arch.text}</p>
+          <h4>${arch.title || "Projektüberblick"}</h4>
+          <p>${arch.text || "Weitere Details folgen bald."}</p>
         </div>
       `,
         )

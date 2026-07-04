@@ -1,7 +1,7 @@
 {
   "meta": {
     "developerName": "Alex Müller",
-    "philosophy": "Ich entwickele Software aus der Überzeugung heraus, dass das Web keine schwerfälligen Abstraktionsebenen braucht, sondern saubere native Strukturen.",
+    "philosophy": "Ich entwickle Software aus der Überzeugung heraus, dass das Web keine schwerfälligen Abstraktionsebenen braucht, sondern saubere native Strukturen.",
     "role": "Frontend Architect",
     "socials": {
       "github": "https://github.com/dein-username",
@@ -42,7 +42,7 @@
       "desc": "Natives High-Performance Modul für asynchrone Berechnungen im Browser.",
       "id": 1,
       "images": [
-        "../img/fintech-hero.jpg",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "../img/fintech-ui.jpg",
         "../img/fintech-mobile.jpg",
         "../img/fintech-code.jpg",
