@@ -9,6 +9,7 @@ class PortfolioApp {
     this.currentFilename =
       window.location.pathname.split("/").pop() || "index.html";
     this.favorites = this.loadFavorites();
+    this.lightboxInitialized = false;
     this.init();
   }
 
@@ -199,6 +200,58 @@ class PortfolioApp {
     });
   }
 
+  ensureLightbox() {
+    if (this.lightboxInitialized)
+      return document.querySelector(".lightbox-backdrop");
+
+    const backdrop = document.createElement("div");
+    backdrop.className = "lightbox-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+    backdrop.innerHTML = `
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-close" aria-label="Bild schließen">×</button>
+        <img src="" alt="Vergrößertes Projektbild" />
+      </div>
+    `;
+
+    document.body.appendChild(backdrop);
+    backdrop.addEventListener("click", (event) => {
+      if (event.target === backdrop) this.closeLightbox();
+    });
+
+    const closeButton = backdrop.querySelector(".lightbox-close");
+    if (closeButton) {
+      closeButton.addEventListener("click", () => this.closeLightbox());
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") this.closeLightbox();
+    });
+
+    this.lightboxInitialized = true;
+    return backdrop;
+  }
+
+  openLightbox(imageUrl) {
+    const backdrop = this.ensureLightbox();
+    const image = backdrop.querySelector("img");
+    if (image) {
+      image.src = imageUrl;
+      image.alt = "Vergrößertes Projektbild";
+    }
+    backdrop.classList.add("active");
+    backdrop.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  closeLightbox() {
+    const backdrop = document.querySelector(".lightbox-backdrop");
+    if (!backdrop) return;
+    backdrop.classList.remove("active");
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
   // Die Magic-Methode für projektdetail.html
   renderProjectDetailPage() {
     // ID aus der URL auslesen (z.B. ?id=1)
@@ -258,19 +311,54 @@ class PortfolioApp {
 
     // 2. Galerie dynamisch aufbauen
     const galleryContainer = document.querySelector(".project-gallery");
-    if (galleryContainer) {
+    const previewStrip = document.querySelector(".gallery-preview-strip");
+    if (galleryContainer || previewStrip) {
       const galleryImages =
         Array.isArray(project.images) && project.images.length > 0
           ? project.images
           : ["../img/placeholder-project.jpg"];
 
-      galleryContainer.innerHTML = galleryImages
-        .map(
-          (img, index) => `
-        <div class="gallery-item ${index === 0 ? "featured" : ""}" style="background-image: url('${img}'); background-size: cover; background-position: center;"></div>
-      `,
-        )
-        .join("");
+      if (galleryContainer) {
+        galleryContainer.innerHTML = galleryImages
+          .map(
+            (img, index) => `
+          <button
+            type="button"
+            class="gallery-item ${index === 0 ? "featured" : ""}"
+            data-image="${img}"
+            aria-label="Projektbild ${index + 1} vergrößern"
+            style="background-image: url('${img}'); background-size: cover; background-position: center;"
+          ></button>
+        `,
+          )
+          .join("");
+
+        galleryContainer.querySelectorAll(".gallery-item").forEach((button) => {
+          button.addEventListener("click", () => {
+            this.openLightbox(button.dataset.image);
+          });
+        });
+      }
+
+      if (previewStrip) {
+        previewStrip.innerHTML = galleryImages
+          .map(
+            (img) => `
+          <button type="button" class="gallery-preview-item" data-image="${img}" aria-label="Bild vergrößern">
+            <img src="${img}" alt="Projektbild Vorschau" />
+          </button>
+        `,
+          )
+          .join("");
+
+        previewStrip
+          .querySelectorAll(".gallery-preview-item")
+          .forEach((button) => {
+            button.addEventListener("click", () => {
+              this.openLightbox(button.dataset.image);
+            });
+          });
+      }
     }
 
     // 3. Deep-Dive Sektion unten dynamisch aufbauen
