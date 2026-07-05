@@ -62,7 +62,11 @@
       "category": "ui-ux",
       "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
       "id": 2,
-      "images": ["../img/light-hero.jpg", "../img/light-dashboard.jpg"],
+      "images": [
+        "../img/light-hero.jpg",
+        "../img/light-dashboard.jpg",
+        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
+      ],
       "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
       "roleScope": "Senior UI Designer",
       "tags": ["UI/UX", "Design System"],
@@ -80,7 +84,9 @@
       "desc": "Modulare UI-Bibliothek für skalierbare Webkomponenten ohne Framework-Overhead.",
       "id": 3,
       "images": [
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Reduktion der Entwicklungskomplexität um 37% im Team.",
       "roleScope": "Frontend Architect",
@@ -99,7 +105,9 @@
       "desc": "Performancemodul für schnelle Ladezeiten und bessere Core-Web-Vitals-Bewertung.",
       "id": 4,
       "images": [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Ladezeit um 42% reduziert und Conversion gesteigert.",
       "roleScope": "Performance Engineer",
@@ -118,7 +126,9 @@
       "desc": "Produktive Nutzerführung für komplexe Dashboards und Workflow-Tools.",
       "id": 5,
       "images": [
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Steigerung der Task-Completion um 28%.",
       "roleScope": "Senior Product Designer",
@@ -137,7 +147,9 @@
       "desc": "Architektonische Referenz für native Interfaces mit hoher Wartungsfreundlichkeit.",
       "id": 6,
       "images": [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Skalierbarkeit und Wartbarkeit für zukünftige Erweiterungen verbessert.",
       "roleScope": "System Architect",
@@ -156,7 +168,9 @@
       "desc": "Informationsarchitektur für datenstarke Dashboards mit hoher Lesbarkeit.",
       "id": 7,
       "images": [
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Schnellere Informationsaufnahme um 31%.",
       "roleScope": "UX Strategist",
@@ -175,7 +189,9 @@
       "desc": "Kontextueller Formular-Workflow für komplexe Anfrage- und Booking-Prozesse.",
       "id": 8,
       "images": [
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Abbruchquote bei Formularen um 18% reduziert.",
       "roleScope": "Interaction Engineer",
@@ -194,7 +210,9 @@
       "desc": "Brand-Interface für digitale Produkte mit hoher visueller Klarheit.",
       "id": 9,
       "images": [
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Stärkere Markenwahrnehmung und bessere Nutzerbindung.",
       "roleScope": "Visual Designer",
@@ -213,7 +231,9 @@
       "desc": "Erweiterte Interface-Patterns für digitale Produkte mit hoher Produktqualität.",
       "id": 10,
       "images": [
-        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop"
+        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Produktqualität und Interaktionsgefühl deutlich verbessert.",
       "roleScope": "Interface Strategist",

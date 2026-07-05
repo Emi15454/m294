@@ -78,9 +78,17 @@ class PortfolioApp {
       el.innerHTML = `${this.data.meta.developerName} <span>| Developer</span>`;
     });
 
-    const copyrightEl = document.querySelector(".footer-bottom p:first-child");
-    if (copyrightEl)
+    const copyrightEl = document.querySelector(
+      ".footer-copyright, .footer-bottom p:first-child",
+    );
+    if (copyrightEl) {
       copyrightEl.innerHTML = `&copy; ${new Date().getFullYear()} ${this.data.meta.developerName}. Alle Rechte vorbehalten.`;
+    } else {
+      const footerBottom = document.querySelector(".footer-bottom");
+      if (footerBottom) {
+        footerBottom.innerHTML = `<p class="footer-copyright">&copy; ${new Date().getFullYear()} ${this.data.meta.developerName}. Alle Rechte vorbehalten.</p>`;
+      }
+    }
 
     // Dynamische Navigation mit aktiver Zustandserkennung (.active)
     const navList = document.querySelector(".nav-list");
@@ -265,6 +273,7 @@ class PortfolioApp {
         .join("");
     }
 
+    // 3. Deep-Dive Sektion unten dynamisch aufbauen
     const archGrid = document.querySelector(".architecture-grid");
     if (archGrid) {
       const architectureItems =
