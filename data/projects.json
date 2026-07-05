@@ -55,7 +55,10 @@
       ],
       "outcome": "Konstante 60 FPS Scroll-Performance bei massiven Auslastungen.",
       "roleScope": "Lead System Engineer & Interface Architect",
-      "tags": ["Engineering", "WASM"],
+      "tags": [
+        "Engineering",
+        "WASM"
+      ],
       "techStack": "Native CSS Grid, Vanilla JS Object Architecture, Service Workers",
       "title": "Fintech Core Engine"
     },
@@ -76,7 +79,10 @@
       ],
       "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
       "roleScope": "Senior UI Designer",
-      "tags": ["UI/UX", "Design System"],
+      "tags": [
+        "UI/UX",
+        "Design System"
+      ],
       "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
       "title": "Light Speed Frame"
     },
@@ -97,7 +103,10 @@
       ],
       "outcome": "Reduktion der Entwicklungskomplexität um 37% im Team.",
       "roleScope": "Frontend Architect",
-      "tags": ["Architecture", "Components"],
+      "tags": [
+        "Architecture",
+        "Components"
+      ],
       "techStack": "Web Components, HTML Templates, CSS Variables",
       "title": "Component Atlas"
     },
@@ -118,7 +127,10 @@
       ],
       "outcome": "Ladezeit um 42% reduziert und Conversion gesteigert.",
       "roleScope": "Performance Engineer",
-      "tags": ["Engineering", "Performance"],
+      "tags": [
+        "Engineering",
+        "Performance"
+      ],
       "techStack": "Lighthouse, Web Vitals, Critical CSS",
       "title": "Pulse Performance Lab"
     },
@@ -139,7 +151,10 @@
       ],
       "outcome": "Steigerung der Task-Completion um 28%.",
       "roleScope": "Senior Product Designer",
-      "tags": ["UI/UX", "Research"],
+      "tags": [
+        "UI/UX",
+        "Research"
+      ],
       "techStack": "User Flows, Wireframes, Accessibility Audits",
       "title": "Flow Intelligence"
     },
@@ -160,7 +175,10 @@
       ],
       "outcome": "Skalierbarkeit und Wartbarkeit für zukünftige Erweiterungen verbessert.",
       "roleScope": "System Architect",
-      "tags": ["Architecture", "Systems"],
+      "tags": [
+        "Architecture",
+        "Systems"
+      ],
       "techStack": "HTML Semantics, CSS Architecture, Vanilla JS",
       "title": "Native Systems Stack"
     },
@@ -181,7 +199,10 @@
       ],
       "outcome": "Schnellere Informationsaufnahme um 31%.",
       "roleScope": "UX Strategist",
-      "tags": ["UI/UX", "Data"],
+      "tags": [
+        "UI/UX",
+        "Data"
+      ],
       "techStack": "Design Systems, Typography, Data Visualization",
       "title": "Signal Dashboard"
     },
@@ -202,7 +223,10 @@
       ],
       "outcome": "Abbruchquote bei Formularen um 18% reduziert.",
       "roleScope": "Interaction Engineer",
-      "tags": ["Engineering", "Forms"],
+      "tags": [
+        "Engineering",
+        "Forms"
+      ],
       "techStack": "Progressive Enhancement, Validation, Accessibility",
       "title": "Flow Form System"
     },
@@ -223,7 +247,10 @@
       ],
       "outcome": "Stärkere Markenwahrnehmung und bessere Nutzerbindung.",
       "roleScope": "Visual Designer",
-      "tags": ["UI/UX", "Brand"],
+      "tags": [
+        "UI/UX",
+        "Brand"
+      ],
       "techStack": "Visual Design, Mockups, Content Systems",
       "title": "Brand Surface"
     },
@@ -244,7 +271,10 @@
       ],
       "outcome": "Produktqualität und Interaktionsgefühl deutlich verbessert.",
       "roleScope": "Interface Strategist",
-      "tags": ["Architecture", "Patterns"],
+      "tags": [
+        "Architecture",
+        "Patterns"
+      ],
       "techStack": "Interaction Design, Motion Principles, Accessibility",
       "title": "Pattern Studio"
     }
