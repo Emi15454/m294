@@ -27,18 +27,7 @@
       "category": "Web development",
       "desc": "Online Shop für Backwaren mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik mit Vue.js.",
       "id": 1,
-      "images": [
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "../img/fintech-ui.jpg",
-        "../img/fintech-mobile.jpg",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop"
-      ],
+      "images": [],
       "outcome": "Vue.js basiertes Frontend mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik.",
       "roleScope": "Frontend Architect",
       "tags": [
@@ -52,11 +41,7 @@
       "category": "Web development",
       "desc": "Web App für einen Hofladen mit Fokus auf Performance und minimalistischem Design.",
       "id": 2,
-      "images": [
-        "../img/light-hero.jpg",
-        "../img/light-dashboard.jpg",
-        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
-      ],
+      "images": [],
       "outcome": "Reduzierung der Ladezeit um 45% durch optimierte Bildformate und Lazy Loading, 100% eigener Code ohne KI oder Framework-Overhead.",
       "roleScope": "Frontend Developer, UI/UX Designer",
       "tags": [
@@ -71,9 +56,8 @@
       "desc": "Entwicklung eines Einsteigerprojekts - 2D-Plattformer - mit Brackeys-Tutorial und Godot Engine.",
       "id": 3,
       "images": [
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
+        "../img/godot-platformer.jpg",
+        "../img/godot-platformer-2.jpg"
       ],
       "outcome": "Abschluss des Brackeys-Tutorials und Erstellung eines eigenen 2D-Plattformers mit Godot Engine.",
       "roleScope": "Game Developer",
@@ -85,32 +69,22 @@
       "title": "2D Platformer Adventure"
     },
     {
-      "category": "engineering",
-      "desc": "Performancemodul für schnelle Ladezeiten und bessere Core-Web-Vitals-Bewertung.",
+      "category": "Mobile Development",
+      "desc": "Notizen App mit Swift UI und Swift Data, optimiert für macOS mit Fokus auf Performance und Benutzerfreundlichkeit.",
       "id": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop"
-      ],
+      "images": [],
       "outcome": "Ladezeit um 42% reduziert und Conversion gesteigert.",
       "roleScope": "Performance Engineer",
       "tags": [
-        "Engineering",
-        "Performance"
+        "",
+        "MacOS"
       ],
-      "techStack": "Lighthouse, Web Vitals, Critical CSS",
-      "title": "Pulse Performance Lab"
+      "techStack": "Xcode, Swift UI, Swift Data",
+      "title": "Notes App with Swift UI and Swift Data"
     },
     {
-      "architecture": [
-        {
-          "text": "Konzeptentwicklung für bewusste Informationsarchitektur und klare Nutzungskonzepte.",
-          "title": "01 // UX Strategy"
-        }
-      ],
-      "category": "ui-ux",
-      "desc": "Produktive Nutzerführung für komplexe Dashboards und Workflow-Tools.",
+      "category": "Mobile Development",
+      "desc": "Android Quiz-App mit Fokus auf User Experience und Interaktionsdesign.",
       "id": 5,
       "images": [
         "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
@@ -123,18 +97,12 @@
         "UI/UX",
         "Research"
       ],
-      "techStack": "User Flows, Wireframes, Accessibility Audits",
-      "title": "Flow Intelligence"
+      "techStack": "Android Studio, Java, Material Design",
+      "title": "Android Quiz App"
     },
     {
-      "architecture": [
-        {
-          "text": "Native Rendering-Strategie für hohe Interaktivität ohne zusätzliche Framework-Last.",
-          "title": "01 // Render Strategy"
-        }
-      ],
-      "category": "architecture",
-      "desc": "Architektonische Referenz für native Interfaces mit hoher Wartungsfreundlichkeit.",
+      "category": "Web development ",
+      "desc": "Web um Gewohnheiten zu ändern, ",
       "id": 6,
       "images": [
         "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
@@ -142,13 +110,13 @@
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1470&auto=format&fit=crop"
       ],
       "outcome": "Skalierbarkeit und Wartbarkeit für zukünftige Erweiterungen verbessert.",
-      "roleScope": "System Architect",
+      "roleScope": "Frontend Architect",
       "tags": [
-        "Architecture",
-        "Systems"
+        "Web Development",
+        "Frontend"
       ],
-      "techStack": "HTML Semantics, CSS Architecture, Vanilla JS",
-      "title": "Native Systems Stack"
+      "techStack": "Angular, JavaScript, CSS",
+      "title": "Habit Tracker Web App"
     },
     {
       "architecture": [
@@ -223,28 +191,23 @@
       "title": "Brand Surface"
     },
     {
-      "architecture": [
-        {
-          "text": "Zielgerichtete Optimierung von Interaction Patterns und Micro-Interactions.",
-          "title": "01 // Interaction Detail"
-        }
-      ],
-      "category": "architecture",
-      "desc": "Erweiterte Interface-Patterns für digitale Produkte mit hoher Produktqualität.",
+      "category": "Web development",
+      "desc": "Online Shop für elektronische Geräte mit Fokus auf Produktpräsentation und Interaktionsdesign.",
       "id": 10,
       "images": [
         "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Produktqualität und Interaktionsgefühl deutlich verbessert.",
-      "roleScope": "Interface Strategist",
+      "outcome": "Backend und Frontend, Warenkorb-Logik und Produktfilterung erfolgreich implementiert.",
+      "roleScope": "Fullstack Developer",
       "tags": [
-        "Architecture",
-        "Patterns"
+        "Web Development",
+        "Frontend",
+        "Online Shop"
       ],
-      "techStack": "Interaction Design, Motion Principles, Accessibility",
-      "title": "Pattern Studio"
+      "techStack": "Vue.js, tailwindcss",
+      "title": "device-destination Online Shop"
     }
   ]
 }
