@@ -651,6 +651,13 @@ img {
   color: var(--text-main);
 }
 
+.form-status {
+  font-size: var(--fs-small);
+  color: var(--accent);
+  min-height: 1.2em;
+  margin-top: var(--space-xs);
+}
+
 /* Profil & Formulare (kontakt.html) */
 .split-profile-grid {
   display: grid;

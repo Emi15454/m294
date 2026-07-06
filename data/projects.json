@@ -1,11 +1,11 @@
 {
   "meta": {
-    "developerName": "Alex Müller",
+    "developerName": "Emilijan",
     "philosophy": "Ich entwickle Software aus der Überzeugung heraus, dass das Web keine schwerfälligen Abstraktionsebenen braucht, sondern saubere native Strukturen.",
-    "role": "Frontend Architect",
+    "role": "Beginner Game Developer, Frontend Architect",
     "socials": {
-      "github": "https://github.com/dein-username",
-      "linkedin": "https://linkedin.com/in/dein-username"
+      "github": "https://github.com/Emi15454",
+      "linkedin": "https://linkedin.com/in/Emi15454"
     }
   },
   "navigation": [
@@ -24,22 +24,8 @@
   ],
   "projects": [
     {
-      "architecture": [
-        {
-          "text": "Die Datenströme werden über native ECMA-Proxies direkt überwacht und ohne Rendering-Verzögerung verarbeitet.",
-          "title": "01 // Proxy Data Ingestion"
-        },
-        {
-          "text": "Das gesamte visuelle Feedback steuert sich dynamisch über atomare CSS Custom Properties für minimale CPU-Last.",
-          "title": "02 // CSS Variable Layering"
-        },
-        {
-          "text": "Der Script-Aufbau verhindert Speicherlecks durch saubere Event-Listener Deregistrierung beim View-Wechsel.",
-          "title": "03 // Garbage Compaction"
-        }
-      ],
-      "category": "engineering",
-      "desc": "Natives High-Performance Modul für asynchrone Berechnungen im Browser.",
+      "category": "Web development",
+      "desc": "Online Shop für Backwaren mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik mit Vue.js.",
       "id": 1,
       "images": [
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -53,70 +39,52 @@
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Konstante 60 FPS Scroll-Performance bei massiven Auslastungen.",
-      "roleScope": "Lead System Engineer & Interface Architect",
+      "outcome": "Vue.js basiertes Frontend mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik.",
+      "roleScope": "Frontend Architect",
       "tags": [
-        "Engineering",
-        "WASM"
+        "Frontend",
+        "Vue.js"
       ],
-      "techStack": "Native CSS Grid, Vanilla JS Object Architecture, Service Workers",
-      "title": "Fintech Core Engine"
+      "techStack": "Native CSS Grid, Vanilla JS, Vue.js",
+      "title": "Mehlionairs Online Shop"
     },
     {
-      "architecture": [
-        {
-          "text": "Keine Generierung von Tausenden CSS-Klassen, sondern Nutzung nativer Style-Kapselung.",
-          "title": "01 // Zero Utility Overhead"
-        }
-      ],
-      "category": "ui-ux",
-      "desc": "Design-System, das ohne Stylesheets auskommt und rein über CSS-Hooks arbeitet.",
+      "category": "Web development",
+      "desc": "Web App für einen Hofladen mit Fokus auf Performance und minimalistischem Design.",
       "id": 2,
       "images": [
         "../img/light-hero.jpg",
         "../img/light-dashboard.jpg",
         "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Reduktion der Asset-Größe um 94% im Vergleich zu Tailwind.",
-      "roleScope": "Senior UI Designer",
+      "outcome": "Reduzierung der Ladezeit um 45% durch optimierte Bildformate und Lazy Loading, 100% eigener Code ohne KI oder Framework-Overhead.",
+      "roleScope": "Frontend Developer, UI/UX Designer",
       "tags": [
         "UI/UX",
         "Design System"
       ],
-      "techStack": "CSS Custom Properties, Custom Elements, HTML5 Shadow DOM",
-      "title": "Light Speed Frame"
+      "techStack": "Vanilla JS, CSS Grid, HTML5",
+      "title": "Hofladen Onlineshop"
     },
     {
-      "architecture": [
-        {
-          "text": "Modulare Komponentenstruktur mit sauberer Trennung zwischen Daten, Darstellung und Verhalten.",
-          "title": "01 // Component Isolation"
-        }
-      ],
-      "category": "architecture",
-      "desc": "Modulare UI-Bibliothek für skalierbare Webkomponenten ohne Framework-Overhead.",
+      "category": "Game Development",
+      "desc": "Entwicklung eines Einsteigerprojekts - 2D-Plattformer - mit Brackeys-Tutorial und Godot Engine.",
       "id": 3,
       "images": [
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Reduktion der Entwicklungskomplexität um 37% im Team.",
-      "roleScope": "Frontend Architect",
+      "outcome": "Abschluss des Brackeys-Tutorials und Erstellung eines eigenen 2D-Plattformers mit Godot Engine.",
+      "roleScope": "Game Developer",
       "tags": [
-        "Architecture",
-        "Components"
+        "Game Development",
+        "Godot"
       ],
-      "techStack": "Web Components, HTML Templates, CSS Variables",
-      "title": "Component Atlas"
+      "techStack": "Godot Engine 4.6, GDScript, 2D Game Design",
+      "title": "2D Platformer Adventure"
     },
     {
-      "architecture": [
-        {
-          "text": "Performance-Tracking über Core Web Vitals und gezielte Optimierung der Ladepfade.",
-          "title": "01 // Performance Baseline"
-        }
-      ],
       "category": "engineering",
       "desc": "Performancemodul für schnelle Ladezeiten und bessere Core-Web-Vitals-Bewertung.",
       "id": 4,

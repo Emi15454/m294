@@ -22,6 +22,9 @@ class PortfolioApp {
 
     // 2. Seiten-spezifisches Routing ausführen
     this.routePageLogic();
+
+    // 3. Formulare mit echter Interaktion ausstatten
+    this.setupFormHandlers();
   }
 
   async fetchPortfolioData() {
@@ -137,6 +140,117 @@ class PortfolioApp {
     if (this.currentFilename === "projektdetail.html") {
       this.renderProjectDetailPage();
     }
+  }
+
+  setupFormHandlers() {
+    this.setupNewsletterForm();
+    this.setupContactForm();
+    this.setupProjectInquiryForm();
+  }
+
+  setupNewsletterForm() {
+    const newsletterForm = document.querySelector(".newsletter-form");
+    if (!newsletterForm) return;
+
+    const emailInput = newsletterForm.querySelector('input[type="email"]');
+    const statusMessage = newsletterForm.querySelector(".form-status");
+
+    newsletterForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!emailInput) return;
+
+      const emailValue = emailInput.value.trim();
+      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+
+      if (!isValidEmail) {
+        if (statusMessage) {
+          statusMessage.textContent =
+            "Bitte gib eine gültige E-Mail-Adresse ein.";
+          statusMessage.style.color = "var(--accent)";
+        }
+        return;
+      }
+
+      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent("Newsletter-Anmeldung")}&body=${encodeURIComponent(`Neue Anmeldung: ${emailValue}`)}`;
+      window.location.href = mailtoLink;
+
+      if (statusMessage) {
+        statusMessage.textContent =
+          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+        statusMessage.style.color = "var(--accent)";
+      }
+
+      newsletterForm.reset();
+    });
+  }
+
+  setupContactForm() {
+    const contactForm = document.querySelector("form.form-stack");
+    if (!contactForm) return;
+
+    const subjectSelect = contactForm.querySelector("select");
+    const messageTextarea = contactForm.querySelector("textarea");
+    const statusMessage = contactForm.querySelector(".form-status");
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const subject = subjectSelect ? subjectSelect.value : "Kontakt";
+      const message = messageTextarea ? messageTextarea.value.trim() : "";
+
+      if (!message) {
+        if (statusMessage) {
+          statusMessage.textContent =
+            "Bitte beschreibe kurz die Anforderungen deines Projekts.";
+          statusMessage.style.color = "var(--accent)";
+        }
+        return;
+      }
+
+      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[Kontakt] ${subject}`)}&body=${encodeURIComponent(message)}`;
+      window.location.href = mailtoLink;
+
+      if (statusMessage) {
+        statusMessage.textContent =
+          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+        statusMessage.style.color = "var(--accent)";
+      }
+
+      contactForm.reset();
+    });
+  }
+
+  setupProjectInquiryForm() {
+    const inquiryForm = document.querySelector("#project-inquiry-form");
+    if (!inquiryForm) return;
+
+    const statusMessage = inquiryForm.querySelector(".form-status");
+    inquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const subject = inquiryForm.querySelector("select").value;
+      const message = inquiryForm.querySelector("textarea").value.trim();
+
+      if (!message) {
+        if (statusMessage) {
+          statusMessage.textContent =
+            "Bitte ergänze eine kurze Anfrage zum Projekt.";
+          statusMessage.style.color = "var(--accent)";
+        }
+        return;
+      }
+
+      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[${document.querySelector(".sidebar-sticky h1")?.textContent || "Projekt"}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über dieses Projekt erfahren.`)}`;
+      window.location.href = mailtoLink;
+
+      if (statusMessage) {
+        statusMessage.textContent =
+          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+        statusMessage.style.color = "var(--accent)";
+      }
+
+      inquiryForm.reset();
+    });
   }
 
   renderProjectCards(projects, container) {
