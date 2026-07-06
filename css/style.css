@@ -813,6 +813,11 @@ img {
 /* ==========================================================================
    RESPONSIVE LAYOUT BREAKPOINTS
    ========================================================================== */
+@media (max-width: 1240px) {
+  .section-heading-row {
+    padding: 0 25px 0 25px;
+  }
+}
 
 @media (max-width: 1100px) {
   .detail-grid {
@@ -877,6 +882,7 @@ img {
     min-height: auto;
     padding: var(--space-sm) 0;
     gap: var(--space-sm);
+    padding-left: 25px;
   }
 
   .footer-inner,
@@ -915,8 +921,6 @@ img {
 
   .nav-link {
     padding: 8px 12px;
-    border-radius: 999px;
-    background-color: rgba(255, 255, 255, 0.04);
   }
 
   .nav-link.active {
@@ -936,6 +940,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-xs);
+    padding-left: 25px;
   }
 
   .newsletter {
@@ -953,31 +958,89 @@ img {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 var(--space-sm);
-  }
-
-  .logo {
-    font-size: 1rem;
-  }
-
-  .btn,
-  .filter-pill,
-  .project-favorite-toggle,
-  .favorite-toggle {
-    width: 100%;
-  }
-
-  .gallery-preview-strip {
+  .project-grid,
+  .architecture-grid {
     grid-template-columns: 1fr;
   }
 
-  .lightbox-content {
-    border-radius: 8px;
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: auto;
+    padding: var(--space-sm) 0;
+    gap: var(--space-sm);
+    padding-left: 25px;
   }
 
-  .lightbox-close {
-    width: 36px;
-    height: 36px;
+  .footer-inner,
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .footer-inner {
+    align-items: center;
+  }
+
+  .newsletter-form,
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+
+  .hero-pitch,
+  .hero-lead {
+    max-width: none;
+  }
+
+  .nav-list {
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 8px 12px;
+  }
+
+  .nav-link.active {
+    background-color: rgba(59, 130, 246, 0.16);
+    color: var(--text-main);
+  }
+
+  .site-header {
+    position: sticky;
+  }
+
+  .section-spacing {
+    padding: clamp(2.25rem, 5vw, 3rem) 0;
+  }
+
+  .section-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    padding-left: 25px;
+  }
+
+  .newsletter {
+    padding: clamp(2rem, 5vw, 2.75rem) 0;
+  }
+
+  .newsletter-inner {
+    gap: var(--space-lg);
+  }
+
+  .newsletter-text,
+  .newsletter-form {
+    max-width: none;
   }
 }
