@@ -1,7 +1,7 @@
 {
   "meta": {
-    "developerName": "Emilijan",
-    "philosophy": "Ich entwickle Software aus der Überzeugung heraus, dass das Web keine schwerfälligen Abstraktionsebenen braucht, sondern saubere native Strukturen.",
+    "developerName": "John Doe",
+    "philosophy": "Ich glaube an die Kraft von Technologie, um kreative Ideen in die Realität umzusetzen. Mein Ziel ist es, innovative und benutzerfreundliche digitale Lösungen zu entwickeln, die sowohl ästhetisch ansprechend als auch funktional sind.",
     "role": "Beginner Game Developer, Frontend Architect",
     "socials": {
       "github": "https://github.com/Emi15454",
@@ -34,7 +34,7 @@
         "Frontend",
         "Vue.js"
       ],
-      "techStack": "Native CSS Grid, Vanilla JS, Vue.js",
+      "techStack": "Native CSS Grid, TypeScript, Vue.js",
       "title": "Mehlionairs Online Shop"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "category": "Game Development",
-      "desc": "Entwicklung eines Einsteigerprojekts - 2D-Plattformer - mit Brackeys-Tutorial und Godot Engine.",
+      "desc": "Entwicklung eines Einsteigerprojekts mit Brackeys-Tutorial und Godot Engine.",
       "id": 3,
       "images": [
         "../img/godot-platformer.jpg",
@@ -91,8 +91,8 @@
         "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Steigerung der Task-Completion um 28%.",
-      "roleScope": "Senior Product Designer",
+      "outcome": "Verbesserte Benutzerinteraktion und höhere Quiz-Abschlussrate durch optimiertes UI/UX-Design.",
+      "roleScope": "UI/UX Designer, Android Developer",
       "tags": [
         "UI/UX",
         "Research"
@@ -102,7 +102,7 @@
     },
     {
       "category": "Web development ",
-      "desc": "Web um Gewohnheiten zu ändern, ",
+      "desc": "Web-App zur Unterstützung bei der Veränderung von Gewohnheiten.",
       "id": 6,
       "images": [
         "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
@@ -116,55 +116,43 @@
         "Frontend"
       ],
       "techStack": "Angular, JavaScript, CSS",
-      "title": "Habit Tracker Web App"
+      "title": "Habit Tracker App"
     },
     {
-      "architecture": [
-        {
-          "text": "Darstellung komplexer Daten über klare, reduzierte Interface-Muster und Lokalisierung.",
-          "title": "01 // Data Narrative"
-        }
-      ],
-      "category": "ui-ux",
-      "desc": "Informationsarchitektur für datenstarke Dashboards mit hoher Lesbarkeit.",
+      "category": "Game Development",
+      "desc": "Unity Junior Programmer Projekt mit Fokus auf einfache 3D-Spielmechanik C#-Scripting.",
       "id": 7,
       "images": [
         "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Schnellere Informationsaufnahme um 31%.",
-      "roleScope": "UX Strategist",
+      "outcome": "erfolgreiche Implementierung von grundlegenden Spielmechaniken und C#-Scripting in Unity.",
+      "roleScope": "",
       "tags": [
-        "UI/UX",
-        "Data"
+        "Game Development",
+        "Unity"
       ],
-      "techStack": "Design Systems, Typography, Data Visualization",
-      "title": "Signal Dashboard"
+      "techStack": "Unity, C#",
+      "title": "Unity Junior Programmer Projekt"
     },
     {
-      "architecture": [
-        {
-          "text": "Sicherer Aufbau von Formular- und Zustandslogik ohne unnötige Abhängigkeiten.",
-          "title": "01 // Form Logic"
-        }
-      ],
-      "category": "engineering",
-      "desc": "Kontextueller Formular-Workflow für komplexe Anfrage- und Booking-Prozesse.",
+      "category": "game development",
+      "desc": "einfaches 2D Realtime Strategy Game mit Godot Engine und GDScript, Fokus auf Interaktionsdesign und Spielmechanik.",
       "id": 8,
       "images": [
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1470&auto=format&fit=crop"
       ],
-      "outcome": "Abbruchquote bei Formularen um 18% reduziert.",
-      "roleScope": "Interaction Engineer",
+      "outcome": " Erfolgreiche Implementierung von grundlegenden Spielmechaniken und Interaktionsdesign in Godot Engine.",
+      "roleScope": "Game Developer",
       "tags": [
         "Engineering",
         "Forms"
       ],
-      "techStack": "Progressive Enhancement, Validation, Accessibility",
-      "title": "Flow Form System"
+      "techStack": "Godot, GdScript",
+      "title": "Godot 2d Rts Game"
     },
     {
       "architecture": [
@@ -188,7 +176,7 @@
         "Brand"
       ],
       "techStack": "Visual Design, Mockups, Content Systems",
-      "title": "Brand Surface"
+      "title": ""
     },
     {
       "category": "Web development",
@@ -212,7 +200,7 @@
         "Frontend",
         "Online Shop"
       ],
-      "techStack": "Vue.js, tailwindcss",
+      "techStack": "Vue.js, TypeScript, Tailwindcss",
       "title": "device-destination Online Shop"
     }
   ]
