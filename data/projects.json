@@ -24,24 +24,33 @@
   ],
   "projects": [
     {
-      "category": "Web development",
-      "desc": "Online Shop für Backwaren mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik mit Vue.js.",
+      "category": "web development",
+      "desc": "ein Online Shop für Backwaren mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik, entwickelt mit Vue.js.",
       "id": 1,
-      "images": [],
+      "images": [
+        "../img/mehlionaers/mehlionaers1.png",
+        "../img/mehlionaers/mehlionaers2.png",
+        "../img/mehlionaers/mehlionaers3.png"
+      ],
       "outcome": "Vue.js basiertes Frontend mit Echtzeit-Produktfilterung und dynamischer Warenkorb-Logik.",
-      "roleScope": "Frontend Architect",
+      "roleScope": "Frontend- and JavaScript Architect",
       "tags": [
         "Frontend",
         "Vue.js"
       ],
-      "techStack": "Native CSS Grid, TypeScript, Vue.js",
+      "techStack": "Vue.js, TypeScript, Native CSS Grid",
       "title": "Mehlionairs Online Shop"
     },
     {
-      "category": "Web development",
+      "category": "web development",
       "desc": "Web App für einen Hofladen mit Fokus auf Performance und minimalistischem Design.",
       "id": 2,
-      "images": [],
+      "images": [
+        "../img/Hofladen/hofladen1.png",
+        "../img/Hofladen/hofladen2.png",
+        "../img/Hofladen/hofladen3.png",
+        "../img/Hofladen/hofladen4.png"
+      ],
       "outcome": "Reduzierung der Ladezeit um 45% durch optimierte Bildformate und Lazy Loading, 100% eigener Code ohne KI oder Framework-Overhead.",
       "roleScope": "Frontend Developer, UI/UX Designer",
       "tags": [
@@ -52,12 +61,13 @@
       "title": "Hofladen Onlineshop"
     },
     {
-      "category": "Game Development",
+      "category": "game development",
       "desc": "Entwicklung eines Einsteigerprojekts mit Brackeys-Tutorial und Godot Engine.",
       "id": 3,
       "images": [
-        "../img/godot-platformer.jpg",
-        "../img/godot-platformer-2.jpg"
+        "../img/godot 2d platformer/godot-platformer.png",
+        "../img/godot 2d platformer/godot-platformer2.png",
+        "../img/godot 2d platformer/godot-platformer3.png"
       ],
       "outcome": "Abschluss des Brackeys-Tutorials und Erstellung eines eigenen 2D-Plattformers mit Godot Engine.",
       "roleScope": "Game Developer",
@@ -69,10 +79,15 @@
       "title": "2D Platformer Adventure"
     },
     {
-      "category": "Mobile Development",
+      "category": "app development",
       "desc": "Notizen App mit Swift UI und Swift Data, optimiert für macOS mit Fokus auf Performance und Benutzerfreundlichkeit.",
       "id": 4,
-      "images": [],
+      "images": [
+        "../img/NotesApp/NotesApp1.png",
+        "../img/NotesApp/NotesApp2.png",
+        "../img/NotesApp/NotesApp3.png",
+        "../img/NotesApp/NotesApp4.png"
+      ],
       "outcome": "Ladezeit um 42% reduziert und Conversion gesteigert.",
       "roleScope": "Performance Engineer",
       "tags": [
@@ -83,13 +98,13 @@
       "title": "Notes App with Swift UI and Swift Data"
     },
     {
-      "category": "Mobile Development",
+      "category": "mobile development",
       "desc": "Android Quiz-App mit Fokus auf User Experience und Interaktionsdesign.",
       "id": 5,
       "images": [
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1470&auto=format&fit=crop"
+        "../img/m335/quizapp1.png",
+        "../img/m335/quizapp2.png",
+        "../img/m335/quizapp3.png"
       ],
       "outcome": "Verbesserte Benutzerinteraktion und höhere Quiz-Abschlussrate durch optimiertes UI/UX-Design.",
       "roleScope": "UI/UX Designer, Android Developer",
@@ -101,13 +116,11 @@
       "title": "Android Quiz App"
     },
     {
-      "category": "Web development ",
+      "category": "web development ",
       "desc": "Web-App zur Unterstützung bei der Veränderung von Gewohnheiten.",
       "id": 6,
       "images": [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1470&auto=format&fit=crop"
+        "../img/m294/habittracker1.png"
       ],
       "outcome": "Skalierbarkeit und Wartbarkeit für zukünftige Erweiterungen verbessert.",
       "roleScope": "Frontend Architect",
@@ -123,9 +136,9 @@
       "desc": "Unity Junior Programmer Projekt mit Fokus auf einfache 3D-Spielmechanik C#-Scripting.",
       "id": 7,
       "images": [
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1470&auto=format&fit=crop"
+        "../img/unity junior programmer/juniorprogrammer1.png",
+        "../img/unity junior programmer/juniorprogrammer2.png",
+        "../img/unity junior programmer/juniorprogrammer3.png"
       ],
       "outcome": "erfolgreiche Implementierung von grundlegenden Spielmechaniken und C#-Scripting in Unity.",
       "roleScope": "",
@@ -141,9 +154,10 @@
       "desc": "einfaches 2D Realtime Strategy Game mit Godot Engine und GDScript, Fokus auf Interaktionsdesign und Spielmechanik.",
       "id": 8,
       "images": [
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1470&auto=format&fit=crop"
+        "../img/godot rts/godotrts1.png",
+        "../img/godot rts/godotrts2.png",
+        "../img/godot rts/godotrts3.png",
+        "../img/godot rts/godotrts4.png"
       ],
       "outcome": " Erfolgreiche Implementierung von grundlegenden Spielmechaniken und Interaktionsdesign in Godot Engine.",
       "roleScope": "Game Developer",
@@ -155,12 +169,6 @@
       "title": "Godot 2d Rts Game"
     },
     {
-      "architecture": [
-        {
-          "text": "Kombination aus klarer Informationshierarchie und fokussiertem Visual Design.",
-          "title": "01 // Visual Narrative"
-        }
-      ],
       "category": "ui-ux",
       "desc": "Brand-Interface für digitale Produkte mit hoher visueller Klarheit.",
       "id": 9,
@@ -183,15 +191,8 @@
       "desc": "Online Shop für elektronische Geräte mit Fokus auf Produktpräsentation und Interaktionsdesign.",
       "id": 10,
       "images": [
-        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1470&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop"
+        "../img/device-destination/device-destination1.png",
+        "../img/device-destination/device-destination2.png"
       ],
       "outcome": "Backend und Frontend, Warenkorb-Logik und Produktfilterung erfolgreich implementiert.",
       "roleScope": "Fullstack Developer",

@@ -265,7 +265,7 @@ class PortfolioApp {
         const imageUrl =
           Array.isArray(p.images) && p.images.length > 0
             ? p.images[0]
-            : "../img/placeholder-project.jpg";
+            : "img/placeholder-project.jpg";
         const isFav = this.isFavorite(p.id);
 
         return `
@@ -430,7 +430,7 @@ class PortfolioApp {
       const galleryImages =
         Array.isArray(project.images) && project.images.length > 0
           ? project.images
-          : ["../img/placeholder-project.jpg"];
+          : ["img/placeholderdirectory/placeholder-project.jpg"];
 
       if (galleryContainer) {
         galleryContainer.innerHTML = galleryImages
