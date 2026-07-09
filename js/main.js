@@ -8,6 +8,7 @@ class PortfolioApp {
     this.data = null;
     this.currentFilename =
       window.location.pathname.split("/").pop() || "index.html";
+    this.isHtmlPage = window.location.pathname.includes("/html/");
     this.favorites = this.loadFavorites();
     this.lightboxInitialized = false;
     this.init();
@@ -29,7 +30,10 @@ class PortfolioApp {
 
   async fetchPortfolioData() {
     try {
-      const response = await fetch("../data/projects.json");
+      const dataPath = this.isHtmlPage
+        ? "../data/projects.json"
+        : "data/projects.json";
+      const response = await fetch(dataPath);
       if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
       return await response.json();
     } catch (error) {
@@ -53,6 +57,19 @@ class PortfolioApp {
       "portfolio-favorites",
       JSON.stringify([...this.favorites]),
     );
+  }
+
+  pageUrl(filename) {
+    if (filename === "index.html") {
+      return this.isHtmlPage ? "../index.html" : "index.html";
+    }
+
+    return this.isHtmlPage ? filename : `html/${filename}`;
+  }
+
+  assetUrl(url) {
+    if (!url || /^https?:\/\//.test(url)) return url;
+    return this.isHtmlPage ? url : url.replace(/^\.\.\//, "");
   }
 
   toggleFavorite(projectId) {
@@ -102,7 +119,7 @@ class PortfolioApp {
           const isActive = this.currentFilename === item.url ? "active" : "";
           const ariaCurrent =
             this.currentFilename === item.url ? 'aria-current="page"' : "";
-          return `<li><a href="${item.url}" class="nav-link ${isActive}" ${ariaCurrent}>${item.title}</a></li>`;
+          return `<li><a href="${this.pageUrl(item.url)}" class="nav-link ${isActive}" ${ariaCurrent}>${item.title}</a></li>`;
         })
         .join("");
     }
@@ -264,8 +281,8 @@ class PortfolioApp {
       .map((p) => {
         const imageUrl =
           Array.isArray(p.images) && p.images.length > 0
-            ? p.images[0]
-            : "img/placeholder-project.jpg";
+            ? this.assetUrl(p.images[0])
+            : this.assetUrl("../img/placeholder-project.jpg");
         const isFav = this.isFavorite(p.id);
 
         return `
@@ -276,7 +293,7 @@ class PortfolioApp {
           <h3>${p.title}</h3>
           <p class="card-text">${p.desc}</p>
           <div class="card-actions">
-            <a href="projektdetail.html?id=${p.id}" class="card-link">Projekt ansehen &rarr;</a>
+            <a href="${this.pageUrl("projektdetail.html")}?id=${p.id}" class="card-link">Projekt ansehen &rarr;</a>
             <button type="button" class="favorite-toggle ${isFav ? "active" : ""}" data-project-id="${p.id}">
               ${isFav ? "Gemerkt" : "Merken"}
             </button>
@@ -478,8 +495,8 @@ class PortfolioApp {
     if (galleryContainer || previewStrip) {
       const galleryImages =
         Array.isArray(project.images) && project.images.length > 0
-          ? project.images
-          : ["img/placeholderdirectory/placeholder-project.jpg"];
+          ? project.images.map((img) => this.assetUrl(img))
+          : [this.assetUrl("../img/placeholderdirectory/placeholder-project.jpg")];
 
       if (galleryContainer) {
         galleryContainer.innerHTML = galleryImages
