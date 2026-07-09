@@ -343,7 +343,6 @@ img {
 }
 
 .card-image::before {
-  content: "Project Asset";
   position: absolute;
   top: 50%;
   left: 50%;
