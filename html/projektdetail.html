@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emilijan Russ | Projektdetail</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Emilijan Russ <span>| Developer</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="projekte.html" class="nav-link active">Projekte</a>
+            </li>
+            <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container detail-page-intro">
+        <div class="detail-grid">
+          <section
+            class="project-gallery"
+            aria-label="Projekt visuelle Belege"
+          ></section>
+
+          <aside class="sidebar-sticky">
+            <div>
+              <span
+                style="
+                  font-size: var(--fs-small);
+                  color: var(--accent);
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                "
+                >Projekt</span
+              >
+              <h1></h1>
+              <p></p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color)" />
+
+            <div class="meta-block">
+              <h3>Mein Beitrag</h3>
+              <p></p>
+            </div>
+
+            <div class="meta-block">
+              <h3>Technologien</h3>
+              <p></p>
+            </div>
+
+            <div class="meta-block">
+              <h3>Ergebnis</h3>
+              <p></p>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary project-favorite-toggle"
+              style="text-align: center"
+            >
+              Projekt merken
+            </button>
+
+            <form id="project-inquiry-form" class="detail-inquiry-form">
+              <label for="inquiry-subject">Betreff</label>
+              <select id="inquiry-subject" name="subject">
+                <option value="Feedback">Feedback</option>
+                <option value="Technische Frage">Technische Frage</option>
+                <option value="Projektidee">Projektidee</option>
+              </select>
+              <label for="inquiry-message">Anfrage</label>
+              <textarea
+                id="inquiry-message"
+                name="message"
+                rows="4"
+                placeholder="Ich würde gern mehr über dieses Projekt erfahren..."
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Anfrage senden
+              </button>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://github.com/Emi15454"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/emilijanruss"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Rechtliches</h4>
+            <ul class="footer-links">
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Emilijan Russ. Alle Rechte vorbehalten.
+          </p>
+          <p>Webentwicklung, Games und Apps.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/main.js"></script>
+</html>

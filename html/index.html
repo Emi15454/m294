@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Mein Name] | Premium Portfolio</title>
+    <title>Emilijan Russ | Portfolio</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="logo">[Mein Name] <span>// Portfolio</span></div>
+        <div class="logo">Emilijan Russ <span>| Developer</span></div>
         <nav aria-label="Hauptnavigation">
           <ul class="nav-list">
             <li>
@@ -26,36 +26,35 @@
 
     <main>
       <section class="container hero" aria-label="Vorstellung">
-        <h1 class="hero-pitch">Design trifft auf kompromisslosen Code.</h1>
+        <h1 class="hero-pitch">Web, Games und Apps.</h1>
         <p class="hero-lead">
-          Ich entwickle digitale Interfaces mit klarem typografischem Fokus,
-          extrem hohen Kontrasten und nativer Performance.
+          Ich entwickle Webshops, Web-Apps, Games und mobile Anwendungen mit
+          klarer Struktur, moderner Technik und einem starken Fokus auf
+          Benutzerfreundlichkeit.
         </p>
-        <a href="projekte.html" class="btn btn-primary">Arbeiten ansehen</a>
+        <a href="projekte.html" class="btn btn-primary">Projekte ansehen</a>
       </section>
 
       <section
         class="container section-spacing"
-        aria-labelledby="heading-projects"
+        aria-labelledby="heading-latest"
       >
-        <h2 id="heading-projects">Aktuelle Projekte</h2>
-
-        <div class="project-grid">
+        <div class="section-heading-row">
+          <h2 id="heading-latest">Aktuelle Projekte</h2>
+          <a href="projekte.html" class="text-link">Alle Projekte ansehen</a>
+        </div>
+        <div class="project-grid" data-display="limited">
           <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
+            <div class="card-image"></div>
             <div class="card-body">
               <div class="card-tags">
-                <span class="tag">UI/UX</span>
-                <span class="tag">Engineering</span>
+                <span class="tag">Vue.js</span>
+                <span class="tag">Shop</span>
               </div>
-              <h3>Fintech Dashboard</h3>
+              <h3>Mehlionairs Online Shop</h3>
               <p class="card-text">
-                Ein hoch-kontrastreiches Interface zur Echtzeitanalyse komplexer
-                Transaktionsdaten.
+                Backwaren-Shop mit Produktfilterung, Warenkorb-Logik und
+                klarer Vue.js-Komponentenstruktur.
               </p>
               <a href="projektdetail.html" class="card-link"
                 >Projekt ansehen &rarr;</a
@@ -64,20 +63,15 @@
           </article>
 
           <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
+            <div class="card-image"></div>
             <div class="card-body">
               <div class="card-tags">
-                <span class="tag">Typography</span>
-                <span class="tag">Frontend</span>
+                <span class="tag">Godot</span>
               </div>
-              <h3>E-Commerce Core</h3>
+              <h3>2D Platformer Adventure</h3>
               <p class="card-text">
-                Minimalistischer Onlineshop mit dem Fokus auf radikal schnelle
-                Ladezeiten und Lesbarkeit.
+                Lernprojekt mit Player-Steuerung, Sprungmechanik und ersten
+                Level-Elementen in Godot.
               </p>
               <a href="projektdetail.html" class="card-link"
                 >Projekt ansehen &rarr;</a
@@ -86,19 +80,15 @@
           </article>
 
           <article class="project-card">
-            <div
-              class="card-image"
-              role="img"
-              aria-label="Projekt Vorschau"
-            ></div>
+            <div class="card-image"></div>
             <div class="card-body">
               <div class="card-tags">
-                <span class="tag">Design System</span>
+                <span class="tag">SwiftUI</span>
               </div>
-              <h3>Crypto Token Brand</h3>
+              <h3>Notes App</h3>
               <p class="card-text">
-                Konzeption und native Entwicklung eines skalierbaren
-                UI-Komponentensystems.
+                macOS-App zum Erstellen und Speichern von Notizen mit SwiftUI
+                und Swift Data.
               </p>
               <a href="projektdetail.html" class="card-link"
                 >Projekt ansehen &rarr;</a
@@ -110,25 +100,26 @@
 
       <section
         class="newsletter section-spacing"
-        aria-labelledby="heading-newsletter"
+        aria-labelledby="heading-news"
       >
         <div class="container newsletter-inner">
           <div class="newsletter-text">
-            <h2 id="heading-newsletter">Insights abonnieren</h2>
+            <h2 id="heading-news">Projekt-Updates</h2>
             <p>
-              Erhalte monatlich fundierte Artikel über UI-Architektur, native
-              Webtechnologien und minimalistisches Design.
+              Erhalte kurze Updates zu neuen Web-, Game- und App-Projekten aus
+              meinem Portfolio.
             </p>
           </div>
           <form class="newsletter-form" action="#" method="POST" novalidate>
             <input
               type="email"
               class="input-field"
-              placeholder="Deine E-Mail-Adresse"
+              placeholder="E-Mail-Adresse"
               required
-              aria-label="E-Mail-Adresse für Newsletter"
+              aria-label="E-Mail-Adresse für Projekt-Updates"
             />
-            <button type="submit" class="btn btn-primary">Abonnieren</button>
+            <button type="submit" class="btn btn-primary">Updates abonnieren</button>
+            <p class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -148,8 +139,22 @@
           <div class="footer-col">
             <h4>Socials</h4>
             <ul class="footer-links">
-              <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li>
+                <a
+                  href="https://github.com/Emi15454"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/emilijanruss"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-col">
@@ -161,10 +166,13 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 [Mein Name]. Alle Rechte vorbehalten.</p>
-          <p>Fokus auf das Wesentliche.</p>
+          <p class="footer-copyright">
+            &copy; 2026 Emilijan. Alle Rechte vorbehalten.
+          </p>
+          <p>Webentwicklung, Games und Apps.</p>
         </div>
       </div>
     </footer>
   </body>
+  <script src="../js/main.js"></script>
 </html>

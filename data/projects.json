@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "developerName": "Emilijan Russ",
+    "philosophy": "Ich entwickle digitale Projekte, in denen ich Frontend, Game Development und App-Entwicklung praktisch verbinde. Mir ist wichtig, dass meine Arbeiten klar aufgebaut sind, gut bedienbar bleiben und Schritt für Schritt zeigen, wie ich neue Technologien anwende.",
+    "role": "Frontend Developer, Game Developer, App Developer",
+    "socials": {
+      "github": "https://github.com/Emi15454",
+      "linkedin": "https://linkedin.com/in/emilijanruss"
+    }
+  },
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "Projekte",
+      "url": "projekte.html"
+    },
+    {
+      "title": "Kontakt",
+      "url": "kontakt.html"
+    }
+  ],
+  "projects": [
+    {
+      "category": "web development",
+      "desc": "Ein Vue.js-Onlineshop für Backwaren mit Produktfilterung, Warenkorb-Logik und einer klar aufgebauten Shop-Oberfläche.",
+      "id": 1,
+      "images": [
+        "../img/mehlionaers/mehlionaers1.png",
+        "../img/mehlionaers/mehlionaers2.png",
+        "../img/mehlionaers/mehlionaers3.png"
+      ],
+      "outcome": "Funktionsfähiger Shop-Prototyp mit Filterung, Produktübersicht und dynamischem Warenkorb.",
+      "roleScope": "Frontend-Entwicklung, Komponentenstruktur und Warenkorb-Logik",
+      "tags": [
+        "Frontend",
+        "Vue.js"
+      ],
+      "techStack": "Vue.js, TypeScript, Native CSS Grid",
+      "title": "Mehlionairs Online Shop"
+    },
+    {
+      "category": "web development",
+      "desc": "Eine schlanke Website für einen Hofladen mit übersichtlicher Produktpräsentation und ruhigem, benutzerfreundlichem Layout.",
+      "id": 2,
+      "images": [
+        "../img/Hofladen/hofladen1.png",
+        "../img/Hofladen/hofladen2.png",
+        "../img/Hofladen/hofladen3.png",
+        "../img/Hofladen/hofladen4.png"
+      ],
+      "outcome": "Responsives Frontend mit klarer Navigation, einfachen Inhaltsbereichen und sauberem HTML/CSS-Aufbau.",
+      "roleScope": "Frontend-Entwicklung und UI-Gestaltung",
+      "tags": [
+        "UI/UX",
+        "Design System"
+      ],
+      "techStack": "Vanilla JS, CSS Grid, HTML5",
+      "title": "Hofladen Onlineshop"
+    },
+    {
+      "category": "game development",
+      "desc": "Ein 2D-Platformer in Godot, umgesetzt als Lernprojekt mit Bewegung, Sprungmechanik und ersten Level-Elementen.",
+      "id": 3,
+      "images": [
+        "../img/godot 2d platformer/godot-platformer.png",
+        "../img/godot 2d platformer/godot-platformer2.png",
+        "../img/godot 2d platformer/godot-platformer3.png"
+      ],
+      "outcome": "Spielbarer Prototyp mit grundlegender Player-Steuerung, Level-Aufbau und Godot-Szenenstruktur.",
+      "roleScope": "Game Developer",
+      "tags": [
+        "Game Development",
+        "Godot"
+      ],
+      "techStack": "Godot Engine 4.6, GDScript, 2D Game Design",
+      "title": "2D Platformer Adventure"
+    },
+    {
+      "category": "desktop development",
+      "desc": "Eine macOS-Notizen-App mit SwiftUI und Swift Data, entwickelt zum Strukturieren, Speichern und Bearbeiten eigener Notizen.",
+      "id": 4,
+      "images": [
+        "../img/NotesApp/NotesApp1.png",
+        "../img/NotesApp/NotesApp2.png",
+        "../img/NotesApp/NotesApp3.png",
+        "../img/NotesApp/NotesApp4.png"
+      ],
+      "outcome": "Desktop-App mit persistenter Datenspeicherung, einfacher Bedienung und nativer macOS-Oberfläche.",
+      "roleScope": "macOS-App-Entwicklung mit SwiftUI und Datenmodellierung",
+      "tags": [
+        "SwiftUI",
+        "MacOS"
+      ],
+      "techStack": "Xcode, Swift UI, Swift Data",
+      "title": "Notes App with Swift UI and Swift Data"
+    },
+    {
+      "category": "mobile development",
+      "desc": "Eine Android-Quiz-App mit mehreren Fragen, Auswertung und einer Oberfläche nach Material-Design-Prinzipien.",
+      "id": 5,
+      "images": [
+        "../img/m335/quizapp1.png",
+        "../img/m335/quizapp2.png",
+        "../img/m335/quizapp3.png"
+      ],
+      "outcome": "Mobile App mit Quiz-Logik, Antwortauswahl und klarer Nutzerführung auf Android.",
+      "roleScope": "Android-Entwicklung, Java-Logik und UI-Aufbau",
+      "tags": [
+        "Android",
+        "Java"
+      ],
+      "techStack": "Android Studio, Java, Material Design",
+      "title": "Android Quiz App"
+    },
+    {
+      "category": "web development ",
+      "desc": "Eine Angular-Web-App zum Erfassen und Verfolgen von Gewohnheiten mit Fokus auf Übersicht und tägliche Nutzung.",
+      "id": 6,
+      "images": [
+        "../img/m294/habittracker1.png"
+      ],
+      "outcome": "Strukturierte Web-App mit Komponentenaufbau, Zustandslogik und erweiterbarer Oberfläche.",
+      "roleScope": "Angular-Frontend, Komponentenstruktur und UI-Logik",
+      "tags": [
+        "Web Development",
+        "Frontend"
+      ],
+      "techStack": "Angular, JavaScript, CSS",
+      "title": "Habit Tracker App"
+    },
+    {
+      "category": "Game Development",
+      "desc": "Ein Unity-Lernprojekt aus dem Junior-Programmer-Kurs mit einfachen 3D-Spielmechaniken und C#-Scripting.",
+      "id": 7,
+      "images": [
+        "../img/unity junior programmer/juniorprogrammer1.png",
+        "../img/unity junior programmer/juniorprogrammer2.png",
+        "../img/unity junior programmer/juniorprogrammer3.png"
+      ],
+      "outcome": "Umgesetzte Gameplay-Grundlagen mit Objektsteuerung, Kollisionslogik und ersten interaktiven Szenen.",
+      "roleScope": "Unity-Entwicklung und C#-Gameplay-Scripting",
+      "tags": [
+        "Game Development",
+        "Unity"
+      ],
+      "techStack": "Unity, C#",
+      "title": "Unity Junior Programmer Projekt"
+    },
+    {
+      "category": "game development",
+      "desc": "Ein 2D-Realtime-Strategy-Prototyp in Godot mit Fokus auf Einheitensteuerung, Interaktion und Spielgefühl.",
+      "id": 8,
+      "images": [
+        "../img/godot rts/godotrts1.png",
+        "../img/godot rts/godotrts2.png",
+        "../img/godot rts/godotrts3.png",
+        "../img/godot rts/godotrts4.png"
+      ],
+      "outcome": "Spielbarer RTS-Prototyp mit Godot-Szenen, GDScript-Logik und ersten strategischen Interaktionen.",
+      "roleScope": "Game Developer",
+      "tags": [
+        "Godot",
+        "GDScript"
+      ],
+      "techStack": "Godot, GdScript",
+      "title": "Godot 2d Rts Game"
+    },
+    {
+      "category": "web development",
+      "desc": "Eine Portfolio-Website für meine Projekte aus Webentwicklung, Game Development und App-Entwicklung.",
+      "id": 9,
+      "images": [
+        "../img/m294/habittracker1.png",
+        "../img/mehlionaers/mehlionaers1.png",
+        "../img/godot rts/godotrts1.png"
+      ],
+      "outcome": "Mehrseitiges Portfolio mit Projektfilter, Detailseiten, Kontaktformular und dynamischen Inhalten aus JSON.",
+      "roleScope": "Konzept, HTML/CSS-Struktur, JavaScript-Logik und Content-Pflege",
+      "tags": [
+        "Portfolio",
+        "JavaScript"
+      ],
+      "techStack": "HTML5, CSS Grid, JavaScript, JSON",
+      "title": "Developer Portfolio Website"
+    },
+    {
+      "category": "Web development",
+      "desc": "Ein Onlineshop für elektronische Geräte mit Produktübersicht, Warenkorb-Funktionen und modernem Frontend-Aufbau.",
+      "id": 10,
+      "images": [
+        "../img/device-destination/device-destination1.png",
+        "../img/device-destination/device-destination2.png"
+      ],
+      "outcome": "Shop-Oberfläche mit Produktdarstellung, Filter- beziehungsweise Warenkorb-Logik und responsivem Layout.",
+      "roleScope": "Frontend-Entwicklung, Shop-Logik und UI-Umsetzung",
+      "tags": [
+        "Web Development",
+        "Frontend",
+        "Online Shop"
+      ],
+      "techStack": "Vue.js, TypeScript, Tailwindcss",
+      "title": "device-destination Online Shop"
+    }
+  ]
+}

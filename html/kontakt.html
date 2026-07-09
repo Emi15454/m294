@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emilijan Russ | Kontakt</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Emilijan Russ <span>| Developer</span></div>
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="projekte.html" class="nav-link">Projekte</a></li>
+            <li>
+              <a href="kontakt.html" class="nav-link active" aria-current="page"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section-spacing">
+      <section class="split-profile-grid" aria-label="Über mich und Vision">
+        <div
+          class="profile-image-placeholder"
+          role="img"
+          aria-label="Cleaner Arbeitsplatz mit Laptop, Pflanze und Notizbuch"
+        ></div>
+        <div>
+          <h1 style="margin-bottom: var(--space-sm)">
+            Meine Arbeitsphilosophie
+          </h1>
+          <p style="margin-bottom: var(--space-md)">
+            Ich entwickle Webshops, Web-Apps, kleine Games und Apps als
+            praxisnahe Projekte. Dabei lerne ich neue Technologien direkt am
+            Ergebnis: mit klaren Interfaces, sauberer Logik und nachvollziehbarer
+            Struktur.
+          </p>
+          <h3>Fokus-Stack</h3>
+          <ul class="tech-tag-list">
+            <li class="tech-tag">Vue.js, TypeScript & Tailwind CSS</li>
+            <li class="tech-tag">Angular, JavaScript, HTML5 & CSS Grid</li>
+            <li class="tech-tag">Godot, GDScript & 2D Game Design</li>
+            <li class="tech-tag">Unity, C# & Gameplay Scripting</li>
+            <li class="tech-tag">SwiftUI, Swift Data & macOS Apps</li>
+            <li class="tech-tag">Android Studio, Java & Material Design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="form-title"
+        style="
+          border-top: 1px solid var(--border-color);
+          padding-top: var(--space-xxl);
+        "
+      >
+        <div style="text-align: center; margin-bottom: var(--space-xl)">
+          <h2 id="form-title">Projektidee besprechen</h2>
+          <p>Wähle den Bereich, der am besten zu deiner Anfrage passt.</p>
+        </div>
+
+        <form class="form-stack" action="#" method="POST">
+          <div>
+            <label
+              for="routing-subject"
+              style="
+                display: block;
+                font-size: var(--fs-small);
+                margin-bottom: var(--space-xs);
+              "
+              >Projektfokus</label
+            >
+            <div class="select-wrapper">
+              <select id="routing-subject" class="custom-select" name="subject">
+                <option value="web-development">
+                  Webshop / Web-App Entwicklung
+                </option>
+                <option value="game-development">
+                  Game Development mit Godot oder Unity
+                </option>
+                <option value="desktop-development">
+                  macOS App mit SwiftUI
+                </option>
+                <option value="mobile-development">
+                  Android App mit Java und Material Design
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="project-details"
+              style="
+                display: block;
+                font-size: var(--fs-small);
+                margin-bottom: var(--space-xs);
+              "
+              >Projektdetails und Anforderungen</label
+            >
+            <textarea
+              id="project-details"
+              class="form-textarea"
+              placeholder="Beschreibe kurz, worum es bei deinem Projekt geht..."
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="align-self: flex-start"
+          >
+            Anfrage senden
+          </button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Socials</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://github.com/Emi15454"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/emilijanruss"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Rechtliches</h4>
+            <ul class="footer-links">
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2026 Emilijan Russ. Alle Rechte vorbehalten.
+          </p>
+          <p>Webentwicklung, Games und Apps.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/main.js"></script>
+</html>
