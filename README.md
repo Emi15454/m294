@@ -1,97 +1,62 @@
-# Emilijan Russ Portfolio
+# Personal Developer Portfolio – Space Blue Edition
 
-Dieses Projekt ist ein persönliches Developer-Portfolio für Webentwicklung,
-Game Development und App-Entwicklung. Die Startseite liegt direkt im
-Root-Verzeichnis, die weiteren Seiten befinden sich im Ordner `html/`.
+Ein modernes, minimalistisches und typografie-fokussiertes digitales Portfolio, das als Einzelprojekt über den Zeitraum von 20 Lektionen entwickelt wurde. Die Website präsentiert meine Fähigkeiten, Projekte und Philosophie als spezialisierter Webentwickler. Das gesamte Projekt wurde unter der Prämisse der Framework-Freiheit komplett in nativem Code umgesetzt.
 
-Die Website wurde mit HTML, CSS und Vanilla JavaScript umgesetzt. Projektdaten,
-Navigation, Social Links und Metainformationen werden aus `data/projects.json`
-geladen und dynamisch in die Seiten gerendert.
+## 🚀 Live-Demo & Repository
 
-## Inhalt
+- **Veröffentlichte Website:** https://emi15454.github.io/m294/
+- **Git-Repository:** https://github.com/Emi15454/m294
 
-- Startseite mit Hero-Bereich, Projektvorschau und Projekt-Updates-Formular
-- Projektübersicht mit dynamisch geladenen Projektkarten
-- Kategorie-Filter für Web Development, Game Development und Android Apps
-- Wiederverwendbare Projektdetailseite mit Galerie und Anfrageformular
-- Kontaktseite mit Arbeitsphilosophie, Fokus-Stack und Kontaktformular
-- Favoritenfunktion für Projekte über `localStorage`
+---
 
-## Projektbereiche
+## ✨ Hauptfunktionen (Features)
 
-Das Portfolio zeigt Projekte aus mehreren Bereichen:
+- **Startseite (Home):**
+  - Prägnanter Hero-Bereich mit persönlichem Entwickler-Pitch (in der Ich-Form).
+  - Ein hochgradig responsives 3-Spalten-Grid zur Vorschau aktueller Projekte.
+  - Minimalistisches und barrierefreies Newsletter-Anmeldeformular mit Fokus-Effekten.
+- **Projektübersicht:**
+  - Dynamisches CSS-Grid-Layout zur strukturierten Darstellung von mindestens 10 Projekten.
+  - Performanter, clientseitiger JavaScript-Kategoriefilter zur Echtzeit-Sortierung der Projekte.
+  - Interaktives Favoriten-Icon (Bookmark-Herz) auf jeder Projektkarte.
+- **Projektdetails:**
+  - Asymmetrisches Spalten-Layout (60% Medien links, 40% Sidebar rechts) für die Desktop-Ansicht.
+  - Einbindung von Bildgalerien und validen HTML5 `<video>`-Platzhaltern.
+  - Integriertes Terminanfrageformular sowie ein vorbereiteter Platzhalter für ein JavaScript-basiertes Calendly- oder Cal.com-Widget.
+- **Kontakt & Über mich:**
+  - Zweispaltiges Profil-Layout zur Vorstellung meines Tech-Stacks und meiner Arbeitsweise.
+  - Barrierefreies Kontaktformular mit einer visuell angepassten `<select>`-Betreffzeile zur automatischen E-Mail-Kategorisierung.
+- **Merkliste (Erweiterung):**
+  - Persistente Favoritenfunktion mittels der nativen Web Storage API (`localStorage`), die gewählte Projekte auch nach einem Seiten-Reload im UI aktiv hält.
 
-- Webshops und Web-Apps mit Vue.js, Angular, TypeScript, JavaScript, HTML und CSS
-- Game-Prototypen mit Godot, GDScript, Unity und C#
-- macOS-App-Entwicklung mit SwiftUI und Swift Data
-- Android-App-Entwicklung mit Java und Material Design
-- Dieses Portfolio selbst als HTML/CSS/JavaScript-Projekt
+---
 
-## Ordnerstruktur
+## 🛠️ Technische Anforderungen & Architektur
+
+- **100% Nativer Code:** Verzicht auf CSS-Frameworks (kein Tailwind CSS, kein Bootstrap). Reines HTML5, CSS3 und Vanilla JavaScript.
+- **Modernes Layout-System:** Konsequenter Einsatz von CSS Grid (`repeat(auto-fit, minmax(...))`) für responsive Inhaltsraster und Flexbox für die Navigationselemente.
+- **Design-System (Space Blue Theme):**
+  - Konsistenter, kontraststarker Dark-Mode basierend auf einer edlen Farbpalette (`#001727` Ink Black als Haupt-Hintergrund, `#00223b` Prussian Blue für Karten/Sektionen).
+  - Vollständig barrierefreie Farbkontraste nach WCAG-Richtlinien.
+  - Flüssige Typografie und Abstände durch den Einsatz von CSS-Variablen, mathematischen Funktionen (`clamp()`) und einem strikten 8px-Rastersystem.
+- **Semantische Struktur:** Saubere Trennung und Gliederung aller Seiten in standardisierte `<header>`-, `<main>`- und `<footer>`-Bereiche.
+
+---
+
+## 📂 Ordnerstruktur
 
 ```text
-.
 ├── css/
-│   └── style.css              # Design, Layout, Responsive Styles
-├── data/
-│   └── projects.json          # Projekt-, Meta- und Navigationsdaten
-├── docs/
-│   ├── STYLEGUIDE.md
-│   └── WIREFRAMES.md
-├── html/
-│   ├── kontakt.html           # Kontaktseite
-│   ├── projektdetail.html     # Dynamische Projektdetailseite
-│   └── projekte.html          # Projektübersicht mit Filter
-├── img/                       # Lokale Projektbilder
+│   └── style.css       # Zentrales Design-System, Variablen und responsive Layouts
 ├── js/
-│   └── main.js                # Datenladen, Rendering, Filter, Formulare
-├── index.html                 # Startseite im Root-Verzeichnis
-├── KIDOKU.md                  # KI-Dokumentation
-└── README.md
+│   └── main.js         # JavaScript für Filterlogik und                LocalStorage-Merkliste
+├── docs/
+│   ├── STYLEGUIDE.md   # Dokumentation von Typografie, Farben und Spacing
+│   └── WIREFRAMES.md   # Layout-Skizzen für Mobile, Tablet und Desktop
+├── index.html          # Startseite (Home)
+├── projekte.html       # Projektübersicht mit dynamischem Filter
+├── projektdetail.html  # Wiederverwendbares Template für Projektdetails
+├── kontakt.html        # Kontaktseite & "Über mich"-Sektion
+├── KI-DOKU.md          # Umfassende KI-Dokumentation (Evaluation & Reflexion)
+└── README.md           # Diese Hauptdokumentation
 ```
-
-## Pfadlogik
-
-Da `index.html` im Root liegt und die Unterseiten im Ordner `html/`, behandelt
-`js/main.js` die Pfade abhängig von der aktuellen Seite:
-
-- Root-Startseite lädt `data/projects.json`, `css/style.css` und `js/main.js`
-- Unterseiten laden Ressourcen über `../data/`, `../css/` und `../js/`
-- Dynamische Links zeigen von der Startseite nach `html/...`
-- Dynamische Links auf Unterseiten bleiben innerhalb von `html/`
-
-Dadurch funktionieren Navigation, Projektkarten und Detailseiten sowohl von der
-Startseite als auch von den Unterseiten aus.
-
-## Lokal starten
-
-Die Website sollte über einen lokalen Server geöffnet werden, weil die Projektdaten
-per `fetch()` aus der JSON-Datei geladen werden.
-
-```bash
-python -m http.server 8000
-```
-
-Danach ist die Startseite erreichbar unter:
-
-```text
-http://localhost:8000/index.html
-```
-
-## Technische Umsetzung
-
-- Semantisches HTML mit getrennten Seiten für Home, Projekte, Detail und Kontakt
-- Zentrales CSS mit Variablen, Grid/Flexbox-Layouts und responsiven Breakpoints
-- Vanilla JavaScript für:
-  - Laden von `projects.json`
-  - dynamische Navigation
-  - Projektkarten und Projektdetails
-  - Kategorie-Filter
-  - Favoriten über `localStorage`
-  - Formularvalidierung und `mailto:`-Links
-- Lokale Bilder für Projektkarten und Galerien
-
-## Hinweise
-
-Die Kontaktformulare versenden keine Daten an ein Backend. Sie öffnen stattdessen
-das lokale E-Mail-Programm über einen `mailto:`-Link.
