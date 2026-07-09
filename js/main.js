@@ -172,12 +172,12 @@ class PortfolioApp {
         return;
       }
 
-      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent("Newsletter-Anmeldung")}&body=${encodeURIComponent(`Neue Anmeldung: ${emailValue}`)}`;
+      const mailtoLink = `mailto:emilijan.russ@edu.tbz.ch?subject=${encodeURIComponent("Projekt-Updates abonnieren")}&body=${encodeURIComponent(`Neue Anmeldung: ${emailValue}`)}`;
       window.location.href = mailtoLink;
 
       if (statusMessage) {
         statusMessage.textContent =
-          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+          "Dein E-Mail-Programm wird geöffnet - bitte sende die Anfrage dort ab.";
         statusMessage.style.color = "var(--accent)";
       }
 
@@ -208,12 +208,12 @@ class PortfolioApp {
         return;
       }
 
-      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[Kontakt] ${subject}`)}&body=${encodeURIComponent(message)}`;
+      const mailtoLink = `mailto:emilijan.russ@edu.tbz.ch?subject=${encodeURIComponent(`[Kontakt] ${subject}`)}&body=${encodeURIComponent(message)}`;
       window.location.href = mailtoLink;
 
       if (statusMessage) {
         statusMessage.textContent =
-          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+          "Dein E-Mail-Programm wird geöffnet - bitte sende die Anfrage dort ab.";
         statusMessage.style.color = "var(--accent)";
       }
 
@@ -240,12 +240,12 @@ class PortfolioApp {
         return;
       }
 
-      const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[${document.querySelector(".sidebar-sticky h1")?.textContent || "Projekt"}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über dieses Projekt erfahren.`)}`;
+      const mailtoLink = `mailto:emilijan.russ@edu.tbz.ch?subject=${encodeURIComponent(`[${document.querySelector(".sidebar-sticky h1")?.textContent || "Projekt"}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über dieses Projekt erfahren.`)}`;
       window.location.href = mailtoLink;
 
       if (statusMessage) {
         statusMessage.textContent =
-          "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+          "Dein E-Mail-Programm wird geöffnet - bitte sende die Anfrage dort ab.";
         statusMessage.style.color = "var(--accent)";
       }
 
@@ -276,9 +276,9 @@ class PortfolioApp {
           <h3>${p.title}</h3>
           <p class="card-text">${p.desc}</p>
           <div class="card-actions">
-            <a href="projektdetail.html?id=${p.id}" class="card-link">Case Study lesen &rarr;</a>
+            <a href="projektdetail.html?id=${p.id}" class="card-link">Projekt ansehen &rarr;</a>
             <button type="button" class="favorite-toggle ${isFav ? "active" : ""}" data-project-id="${p.id}">
-              ${isFav ? "★ Gemerkt" : "☆ Merken"}
+              ${isFav ? "Gemerkt" : "Merken"}
             </button>
           </div>
         </div>
@@ -415,7 +415,7 @@ class PortfolioApp {
     document.body.style.overflow = "";
   }
 
-  // Die Magic-Methode für projektdetail.html
+  // Die Methode für projektdetail.html
   renderProjectDetailPage() {
     // ID aus der URL auslesen (z.B. ?id=1)
     const urlParams = new URLSearchParams(window.location.search);
@@ -445,13 +445,13 @@ class PortfolioApp {
     const favoriteButton = document.querySelector(".project-favorite-toggle");
     if (favoriteButton) {
       favoriteButton.textContent = this.isFavorite(project.id)
-        ? "★ Projekt gemerkt"
-        : "☆ Projekt merken";
+        ? "Projekt gemerkt"
+        : "Projekt merken";
       favoriteButton.addEventListener("click", () => {
         this.toggleFavorite(project.id);
         favoriteButton.textContent = this.isFavorite(project.id)
-          ? "★ Projekt gemerkt"
-          : "☆ Projekt merken";
+          ? "Projekt gemerkt"
+          : "Projekt merken";
         this.updateFavoriteBadge();
       });
     }
@@ -463,11 +463,11 @@ class PortfolioApp {
         event.preventDefault();
         const subject = inquiryForm.querySelector("select").value;
         const message = inquiryForm.querySelector("textarea").value.trim();
-        const mailtoLink = `mailto:alex.mueller@example.com?subject=${encodeURIComponent(`[${project.title}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über ${project.title} erfahren.`)}`;
+        const mailtoLink = `mailto:emilijan.russ@edu.tbz.ch?subject=${encodeURIComponent(`[${project.title}] ${subject}`)}&body=${encodeURIComponent(message || `Hallo, ich möchte gern mehr über ${project.title} erfahren.`)}`;
         window.location.href = mailtoLink;
         if (statusMessage) {
           statusMessage.textContent =
-            "Dein E-Mail-Programm wird geöffnet – bitte sende die Anfrage dort ab.";
+            "Dein E-Mail-Programm wird geöffnet - bitte sende die Anfrage dort ab.";
         }
       });
     }
