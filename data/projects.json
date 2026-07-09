@@ -1,11 +1,11 @@
 {
   "meta": {
-    "developerName": "John Doe",
+    "developerName": "Emilijan Russ",
     "philosophy": "Ich glaube an die Kraft von Technologie, um kreative Ideen in die Realität umzusetzen. Mein Ziel ist es, innovative und benutzerfreundliche digitale Lösungen zu entwickeln, die sowohl ästhetisch ansprechend als auch funktional sind.",
     "role": "Beginner Game Developer, Frontend Architect",
     "socials": {
       "github": "https://github.com/Emi15454",
-      "linkedin": "https://linkedin.com/in/Emi15454"
+      "linkedin": "https://linkedin.com/in/emilijanruss"
     }
   },
   "navigation": [
@@ -79,7 +79,7 @@
       "title": "2D Platformer Adventure"
     },
     {
-      "category": "app development",
+      "category": "desktop development",
       "desc": "Notizen App mit Swift UI und Swift Data, optimiert für macOS mit Fokus auf Performance und Benutzerfreundlichkeit.",
       "id": 4,
       "images": [
@@ -184,7 +184,7 @@
         "Brand"
       ],
       "techStack": "Visual Design, Mockups, Content Systems",
-      "title": ""
+      "title": "Brand-Interface Design"
     },
     {
       "category": "Web development",

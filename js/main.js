@@ -299,16 +299,65 @@ class PortfolioApp {
 
   setupCategoryFilters(container) {
     const pills = document.querySelectorAll(".filter-pill");
+    const normalizeCategory = (value) =>
+      String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "-");
+
     pills.forEach((pill) => {
       pill.addEventListener("click", () => {
-        pills.forEach((p) => p.classList.remove("active"));
+        // 1. Visuell die aktive Klasse umschalten
+        pills.forEach((p) => {
+          p.classList.remove("active");
+          p.setAttribute("aria-selected", "false");
+        });
         pill.classList.add("active");
+        pill.setAttribute("aria-selected", "true");
 
-        const filter = pill.dataset.filter;
+        // Filterwert aus dem HTML holen, kleinschreiben und Leerzeichen entfernen
+        const filter = normalizeCategory(pill.dataset.filter);
+
+        // 2. Projekte filtern
         const filtered =
           filter === "all"
             ? this.data.projects
-            : this.data.projects.filter((p) => p.category === filter);
+            : this.data.projects.filter((p) => {
+                if (!p.category) return false;
+
+                // Kategorie aus der JSON normalisieren
+                const projectCategory = normalizeCategory(p.category);
+
+                // Intelligentes Mapping zwischen HTML data-filter und JSON-Werten
+                if (
+                  filter === "web-development" ||
+                  filter === "web development"
+                ) {
+                  return projectCategory === "web-development";
+                }
+                if (
+                  filter === "engineering" ||
+                  filter === "game-development" ||
+                  filter === "game development"
+                ) {
+                  return projectCategory === "game-development";
+                }
+                if (
+                  filter === "architecture" ||
+                  filter === "app-development" ||
+                  filter === "mobile-development"
+                ) {
+                  return projectCategory === filter;
+                }
+                if (filter === "ui-ux") {
+                  return projectCategory === "ui-ux";
+                }
+
+                // Fallback, falls die Filter-Pill exakt so heißt wie im JSON
+                return projectCategory === filter;
+              });
+
+        // 3. Karten neu rendern
         this.renderProjectCards(filtered, container);
       });
     });
